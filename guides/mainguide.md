@@ -5,41 +5,42 @@
 
 <!-- toc -->
 
-undefined [What/Why???](#whatwhy)
-- [Why does youtube-dl exist?](#why-does-youtube-dl-exist)
-- [What is "Terminal/shell" and the "command-line"?](#what-is-terminalshell-and-the-command-line)
-  * [Old-fashioned video downloading](#old-fashioned-video-downloading)
-- [Why bother with youtube-dl, or the command-line at all?](#why-bother-with-youtube-dl-or-the-command-line-at-all)
-undefined [Getting installed and ready](#getting-installed-and-ready)
-- [Windows](#windows)
-- [Mac](#mac)
-- [Command-line intro](#command-line-intro)
-  * [How to open Terminal](#how-to-open-terminal)
-  * [Keyboard things](#keyboard-things)
-  * [Simple commands](#simple-commands)
-  * [Make a `worky` directory](#make-a-worky-directory)
-undefined [youtube-dl and command-line basics](#youtube-dl-and-command-line-basics)
-- [Downloading a tweeted video](#downloading-a-tweeted-video)
-- [What the output means](#what-the-output-means)
-- [Where to find other sources](#where-to-find-other-sources)
-  * [Navigating your own file system](#navigating-your-own-file-system)
-undefined [Common youtube-dl options](#common-youtube-dl-options)
-- [Starting out](#starting-out)
-  * [See what version you have with `--version`](#see-what-version-you-have-with---version)
-  * [List all the options and what they do with `--help`](#list-all-the-options-and-what-they-do-with---help)
-  * [--quiet](#--quiet)
-- [Control how the downloaded video is named and saved](#control-how-the-downloaded-video-is-named-and-saved)
-  * [--id](#--id)
-  * [Simpler filenames with `--restrict-filenames`](#simpler-filenames-with---restrict-filenames)
-- [Finer-grained filename control with `-o`](#finer-grained-filename-control-with--o)
-- [Miscellaneous flags](#miscellaneous-flags)
-  * [Batch download a list of URLs](#batch-download-a-list-of-urls)
-  * [--no-mtime](#--no-mtime)
-- [Basics about flags](#basics-about-flags)
-- [Other links](#other-links)
-- [Resources](#resources)
-- [More fun](#more-fun)
-undefined [TODOS](#todos)
+- [tl;dr: What is `youtube-dl` and how do you use it?](#tldr-what-is-youtube-dl-and-how-do-you-use-it)
+- [What/Why?](#whatwhy)
+  * [Why does youtube-dl exist?](#why-does-youtube-dl-exist)
+  * [What is "Terminal/shell" and the "command-line"?](#what-is-terminalshell-and-the-command-line)
+    + [Old-fashioned video downloading](#old-fashioned-video-downloading)
+  * [Why bother with youtube-dl, or the command-line at all?](#why-bother-with-youtube-dl-or-the-command-line-at-all)
+- [Getting installed and ready](#getting-installed-and-ready)
+  * [Windows](#windows)
+  * [Mac](#mac)
+  * [Command-line intro](#command-line-intro)
+    + [How to open Terminal](#how-to-open-terminal)
+    + [Keyboard things](#keyboard-things)
+    + [Simple commands](#simple-commands)
+    + [Make a `worky` directory](#make-a-worky-directory)
+- [youtube-dl and command-line basics](#youtube-dl-and-command-line-basics)
+  * [Downloading a tweeted video](#downloading-a-tweeted-video)
+  * [What the output means](#what-the-output-means)
+  * [Where to find other sources](#where-to-find-other-sources)
+    + [Navigating your own file system](#navigating-your-own-file-system)
+- [Common youtube-dl options](#common-youtube-dl-options)
+  * [Starting out](#starting-out)
+    + [See what version you have with `--version`](#see-what-version-you-have-with---version)
+    + [List all the options and what they do with `--help`](#list-all-the-options-and-what-they-do-with---help)
+    + [--quiet](#--quiet)
+  * [Control how the downloaded video is named and saved](#control-how-the-downloaded-video-is-named-and-saved)
+    + [--id](#--id)
+    + [Simpler filenames with `--restrict-filenames`](#simpler-filenames-with---restrict-filenames)
+  * [Finer-grained filename control with `-o`](#finer-grained-filename-control-with--o)
+  * [Miscellaneous flags](#miscellaneous-flags)
+    + [Batch download a list of URLs](#batch-download-a-list-of-urls)
+    + [--no-mtime](#--no-mtime)
+  * [Basics about flags](#basics-about-flags)
+  * [Other links](#other-links)
+  * [Resources](#resources)
+  * [More fun](#more-fun)
+- [TODOS](#todos)
 
 <!-- tocstop -->
 
@@ -53,20 +54,20 @@ $ youtube-dl https://twitter.com/US_FDA/status/1288806553177321473
 
 Hit **Enter**, and `youtube-dl` will run: it'll attempt to find the video in the URL you provided, and then download it to your computer:
 
-<img src="guides/assets/images/youtubedl-tldr.gif" alt="my example of using youtubedl">
+<img src="assets/images/youtubedl-tldr.gif" alt="my example of using youtubedl">
 
 Where does it download? Wherever you ran `youtube-dl`. In the example above, I ran it from my "Home" directory, and so that's where youtube-dl saves the video:
 
-<img src="guides/assets/images/youtubedl-tldr-homesave.png" alt="youtubedl-tldr-homesave.png">
+<img src="assets/images/youtubedl-tldr-homesave.png" alt="youtubedl-tldr-homesave.png">
 
 How did it come up with that this long filename? By default, i.e. with no additional instructions from the user, and given a Twitter URL, youtube-dl will name the file based on the name of the tweeting user – **U.S. FDA**, followed by the text of the tweet, and then the unique ID of the tweet (found in the tweet's URL), and finally, the file type: `.mp4`
 
 > U.S. FDA - Are you a restaurant owner preparing to reopen your business Help keep your food and customers safe by making sure you wear the appropriate face covering --1288806553177321473.mp4
 
 
-## What/Why???
+## What/Why?
 
-
+TK
 
 ### Why does youtube-dl exist?
 
@@ -105,24 +106,24 @@ For example, a popular site that offers the service of helping you download Twit
 
 
 <a href="https://twdownloader.net">
-    <img src="guides/assets/images/twdownloadsite-home.png" alt="twdownloadsite-home.png">
+    <img src="assets/images/twdownloadsite-home.png" alt="twdownloadsite-home.png">
 </a>
 
 The site takes you to download screen, which is basically buttons that directly link to the video file(s), which you can then download by clicking **"Save Link as..."**
 
-<img src="guides/assets/images/twdownloadsite-saveas.png" alt="twdownloadsite-saveas.png">
+<img src="assets/images/twdownloadsite-saveas.png" alt="twdownloadsite-saveas.png">
 
 There are even bots that automate this process, such as [@DownloaderBot](https://twitter.com/DownloaderBot):
 
 > I'm here to help you download twitter videos and gifs easily. Mention me in any tweet that contains a video or gif and I'll reply with link within seconds!
 
 <a href="https://twitter.com/DownloaderBot">
-    <img src="guides/assets/images/twdownloaderbot-profile.png" alt="">
+    <img src="assets/images/twdownloaderbot-profile.png" alt="">
 </a>
 
 If you send a tweet mentioning @DownloaderBot and a tweet URL:
 
-<img src="guides/assets/images/twdownloaderbot-mention.png" alt="twdownloaderbot-mention.png">
+<img src="assets/images/twdownloaderbot-mention.png" alt="twdownloaderbot-mention.png">
 
 – it responds with a link you can "Save Link as...":
 
@@ -141,7 +142,7 @@ Do all these sites have corresponding services like `twdownloader.net`? Maybe, b
 
 *"But there's an app for that!"* – this is true: 
 
-<img src="guides/assets/images/apps-to-download-video-search.png" alt="apps-to-download-video-search.png">
+<img src="assets/images/apps-to-download-video-search.png" alt="apps-to-download-video-search.png">
 
 But besides the hassle (and concerns) of downloading apps/programs to handle your web activity*, many of these apps use youtube-dl to do the work – i.e. the apps are basically a pretty graphical front-end.
 
@@ -325,5 +326,3 @@ https://github.com/kohler/gifsicle
 
 
 ## TODOS
-
-- screenshot http://twittervideodownloader.com/

@@ -20,4 +20,4 @@ mainguide: guides/mainguide.md
 # https://github.com/jonschlinkert/markdown-toc#install
 guides/mainguide.md: _content/mainguide/
 	find "$<"*.md -exec cat {} \+ > $@
-	markdown-toc -i --no-firsth1 $@
+	markdown-toc -i $@

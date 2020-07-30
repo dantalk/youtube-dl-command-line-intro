@@ -17,5 +17,3 @@ https://github.com/kohler/gifsicle
 
 
 ## TODOS
-
-- screenshot http://twittervideodownloader.com/

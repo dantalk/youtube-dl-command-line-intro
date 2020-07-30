@@ -6,7 +6,6 @@
 <!-- toc -->
 
 
-
 ## tl;dr: What is `youtube-dl` and how do you use it?
 
 Once you have youtube-dl installed, go into your operating system's **shell/Terminal** and type the name of the program – i.e. `youtube-dl` – followed by the URL to download from, e.g.
@@ -17,20 +16,20 @@ $ youtube-dl https://twitter.com/US_FDA/status/1288806553177321473
 
 Hit **Enter**, and `youtube-dl` will run: it'll attempt to find the video in the URL you provided, and then download it to your computer:
 
-<img src="guides/assets/images/youtubedl-tldr.gif" alt="my example of using youtubedl">
+<img src="assets/images/youtubedl-tldr.gif" alt="my example of using youtubedl">
 
 Where does it download? Wherever you ran `youtube-dl`. In the example above, I ran it from my "Home" directory, and so that's where youtube-dl saves the video:
 
-<img src="guides/assets/images/youtubedl-tldr-homesave.png" alt="youtubedl-tldr-homesave.png">
+<img src="assets/images/youtubedl-tldr-homesave.png" alt="youtubedl-tldr-homesave.png">
 
 How did it come up with that this long filename? By default, i.e. with no additional instructions from the user, and given a Twitter URL, youtube-dl will name the file based on the name of the tweeting user – **U.S. FDA**, followed by the text of the tweet, and then the unique ID of the tweet (found in the tweet's URL), and finally, the file type: `.mp4`
 
 > U.S. FDA - Are you a restaurant owner preparing to reopen your business Help keep your food and customers safe by making sure you wear the appropriate face covering --1288806553177321473.mp4
 
 
-## What/Why???
+## What/Why?
 
-
+TK
 
 ### Why does youtube-dl exist?
 
@@ -69,24 +68,24 @@ For example, a popular site that offers the service of helping you download Twit
 
 
 <a href="https://twdownloader.net">
-    <img src="guides/assets/images/twdownloadsite-home.png" alt="twdownloadsite-home.png">
+    <img src="assets/images/twdownloadsite-home.png" alt="twdownloadsite-home.png">
 </a>
 
 The site takes you to download screen, which is basically buttons that directly link to the video file(s), which you can then download by clicking **"Save Link as..."**
 
-<img src="guides/assets/images/twdownloadsite-saveas.png" alt="twdownloadsite-saveas.png">
+<img src="assets/images/twdownloadsite-saveas.png" alt="twdownloadsite-saveas.png">
 
 There are even bots that automate this process, such as [@DownloaderBot](https://twitter.com/DownloaderBot):
 
 > I'm here to help you download twitter videos and gifs easily. Mention me in any tweet that contains a video or gif and I'll reply with link within seconds!
 
 <a href="https://twitter.com/DownloaderBot">
-    <img src="guides/assets/images/twdownloaderbot-profile.png" alt="">
+    <img src="assets/images/twdownloaderbot-profile.png" alt="">
 </a>
 
 If you send a tweet mentioning @DownloaderBot and a tweet URL:
 
-<img src="guides/assets/images/twdownloaderbot-mention.png" alt="twdownloaderbot-mention.png">
+<img src="assets/images/twdownloaderbot-mention.png" alt="twdownloaderbot-mention.png">
 
 – it responds with a link you can "Save Link as...":
 
@@ -105,7 +104,7 @@ Do all these sites have corresponding services like `twdownloader.net`? Maybe, b
 
 *"But there's an app for that!"* – this is true: 
 
-<img src="guides/assets/images/apps-to-download-video-search.png" alt="apps-to-download-video-search.png">
+<img src="assets/images/apps-to-download-video-search.png" alt="apps-to-download-video-search.png">
 
 But besides the hassle (and concerns) of downloading apps/programs to handle your web activity*, many of these apps use youtube-dl to do the work – i.e. the apps are basically a pretty graphical front-end.
 
