@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Common youtube-dl options &mdash; Intro to using the command-line and youtube-dl Notes 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://dantalk.github.io/youtube-dl-command-line-introcontent/030-common-options.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="More fun with more tools" href="999-misc.html" />
+    <link rel="prev" title="youtube-dl and command-line basics" href="020-basics.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Intro to using the command-line and youtube-dl Notes
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="000-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="010-setup.html">Getting installed and ready</a></li>
+<li class="toctree-l1"><a class="reference internal" href="020-basics.html">youtube-dl and command-line basics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Common youtube-dl options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-out">Starting out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control-how-the-downloaded-video-is-named-and-saved">Control how the downloaded video is named and saved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#batch-download-a-list-of-urls-from-file">Batch download a list of URLs from file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellaneous-flags">Miscellaneous flags</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="999-misc.html">More fun with more tools</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Intro to using the command-line and youtube-dl Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Common youtube-dl options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/030-common-options.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="common-youtube-dl-options">
+<h1>Common youtube-dl options<a class="headerlink" href="#common-youtube-dl-options" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#starting-out" id="id1">Starting out</a></p>
+<ul>
+<li><p><a class="reference internal" href="#see-what-version-you-have-with-version" id="id2">See what version you have with <code class="docutils literal notranslate"><span class="pre">--version</span></code></a></p></li>
+<li><p><a class="reference internal" href="#list-all-the-options-and-what-they-do-with-help" id="id3">List all the options and what they do with <code class="docutils literal notranslate"><span class="pre">--help</span></code></a></p></li>
+<li><p><a class="reference internal" href="#reduce-the-output-to-screen-with-quiet" id="id4">Reduce the output to screen with <code class="docutils literal notranslate"><span class="pre">--quiet</span></code></a></p></li>
+<li><p><a class="reference internal" href="#do-nothing-with-skip-download" id="id5">Do “nothing” with <code class="docutils literal notranslate"><span class="pre">--skip-download</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-how-the-downloaded-video-is-named-and-saved" id="id6">Control how the downloaded video is named and saved</a></p>
+<ul>
+<li><p><a class="reference internal" href="#use-id-to-save-using-online-video-s-unique-id" id="id7">Use <code class="docutils literal notranslate"><span class="pre">-–id</span></code> to save using online video’s unique ID</a></p></li>
+<li><p><a class="reference internal" href="#simpler-filenames-with-restrict-filenames" id="id8">Simpler filenames with <code class="docutils literal notranslate"><span class="pre">--restrict-filenames</span></code></a></p></li>
+<li><p><a class="reference internal" href="#finer-grained-filename-control-with-o-and-templating" id="id9">Finer-grained filename control with <code class="docutils literal notranslate"><span class="pre">-o</span></code> and templating</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#batch-download-a-list-of-urls-from-file" id="id10">Batch download a list of URLs from file</a></p></li>
+<li><p><a class="reference internal" href="#miscellaneous-flags" id="id11">Miscellaneous flags</a></p>
+<ul>
+<li><p><a class="reference internal" href="#use-no-mtime-to-update-the-last-modified-attribute-of-downloaded-videos" id="id12">Use <code class="docutils literal notranslate"><span class="pre">--no-mtime</span></code> to update the last-modified attribute of downloaded videos</a></p></li>
+<li><p><a class="reference internal" href="#listing-and-specifying-formats" id="id13">Listing and specifying formats</a></p></li>
+<li><p><a class="reference internal" href="#download-the-associated-metadata" id="id14">Download the associated metadata</a></p></li>
+<li><p><a class="reference internal" href="#download-subtitles" id="id15">Download subtitles</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>See a list of options here:</p>
+<p><a class="reference external" href="https://github.com/ytdl-org/youtube-dl#options">https://github.com/ytdl-org/youtube-dl#options</a></p>
+<div class="section" id="starting-out">
+<h2><a class="toc-backref" href="#id1">Starting out</a><a class="headerlink" href="#starting-out" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="see-what-version-you-have-with-version">
+<h3><a class="toc-backref" href="#id2">See what version you have with <code class="docutils literal notranslate"><span class="pre">--version</span></code></a><a class="headerlink" href="#see-what-version-you-have-with-version" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">version</span>                        <span class="n">Print</span> <span class="n">program</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-all-the-options-and-what-they-do-with-help">
+<h3><a class="toc-backref" href="#id3">List all the options and what they do with <code class="docutils literal notranslate"><span class="pre">--help</span></code></a><a class="headerlink" href="#list-all-the-options-and-what-they-do-with-help" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>                       <span class="n">Print</span> <span class="n">this</span> <span class="n">help</span> <span class="n">text</span> <span class="ow">and</span> <span class="n">exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reduce-the-output-to-screen-with-quiet">
+<h3><a class="toc-backref" href="#id4">Reduce the output to screen with <code class="docutils literal notranslate"><span class="pre">--quiet</span></code></a><a class="headerlink" href="#reduce-the-output-to-screen-with-quiet" title="Permalink to this headline">¶</a></h3>
+<p>If you’re doing a lot of work with youtube-dl, especially with archiving
+content that you might already have or are just backing up or whatever,
+you might get tired of seeing all the info youtube-dl barfs to screen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="o">--</span><span class="n">quiet</span>                      <span class="n">Activate</span> <span class="n">quiet</span> <span class="n">mode</span>
+</pre></div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">-q</span></code> reduces the output info to basically nothing…which is why
+“quiet” mode can be unoptimal for command-line novices, as youtube-dl
+basically gives you no feedback about what happened, or what got
+downloaded (you should still get an error, if you tried doing something
+really wrong, like passing in a non-valid URL)</p>
+</div>
+<div class="section" id="do-nothing-with-skip-download">
+<h3><a class="toc-backref" href="#id5">Do “nothing” with <code class="docutils literal notranslate"><span class="pre">--skip-download</span></code></a><a class="headerlink" href="#do-nothing-with-skip-download" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">download</span>                  <span class="n">Do</span> <span class="ow">not</span> <span class="n">download</span> <span class="n">the</span> <span class="n">video</span>
+</pre></div>
+</div>
+<p>youtube-dl’s list of options <em>should</em> vast and intimidating; I
+personally haven’t used more than 1-5% of them (nevermind memorized
+them). It’s hard to explain why there are so many options without
+talking about the myriad of usecases and situations that people use
+youtube-dl for.</p>
+<p>But some options seem downright useless, like <code class="docutils literal notranslate"><span class="pre">--skip-download</span></code></p>
+</div>
+</div>
+<div class="section" id="control-how-the-downloaded-video-is-named-and-saved">
+<h2><a class="toc-backref" href="#id6">Control how the downloaded video is named and saved</a><a class="headerlink" href="#control-how-the-downloaded-video-is-named-and-saved" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="use-id-to-save-using-online-video-s-unique-id">
+<h3><a class="toc-backref" href="#id7">Use <code class="docutils literal notranslate"><span class="pre">-–id</span></code> to save using online video’s unique ID</a><a class="headerlink" href="#use-id-to-save-using-online-video-s-unique-id" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nb">id</span>                             <span class="n">Use</span> <span class="n">only</span> <span class="n">video</span> <span class="n">ID</span> <span class="ow">in</span> <span class="n">file</span> <span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="simpler-filenames-with-restrict-filenames">
+<h3><a class="toc-backref" href="#id8">Simpler filenames with <code class="docutils literal notranslate"><span class="pre">--restrict-filenames</span></code></a><a class="headerlink" href="#simpler-filenames-with-restrict-filenames" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">restrict</span><span class="o">-</span><span class="n">filenames</span>             <span class="n">Restrict</span> <span class="n">filenames</span> <span class="n">to</span> <span class="n">only</span> <span class="n">ASCII</span>
+                                 <span class="n">characters</span><span class="p">,</span> <span class="ow">and</span> <span class="n">avoid</span> <span class="s2">&quot;&amp;&quot;</span> <span class="ow">and</span> <span class="n">spaces</span> <span class="ow">in</span>
+                                 <span class="n">filenames</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="finer-grained-filename-control-with-o-and-templating">
+<h3><a class="toc-backref" href="#id9">Finer-grained filename control with <code class="docutils literal notranslate"><span class="pre">-o</span></code> and templating</a><a class="headerlink" href="#finer-grained-filename-control-with-o-and-templating" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">o</span><span class="p">,</span> <span class="o">--</span><span class="n">output</span> <span class="n">TEMPLATE</span>            <span class="n">Output</span> <span class="n">filename</span> <span class="n">template</span><span class="p">,</span> <span class="n">see</span> <span class="n">the</span> <span class="s2">&quot;OUTPUT</span>
+                                 <span class="n">TEMPLATE</span><span class="s2">&quot; for all the info</span>
+</pre></div>
+</div>
+<p>A full list of template options can be <a class="reference external" href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#output-template">found
+here</a>.</p>
+<p>I think these are the most relevant and commonly-used template options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ext</span></code> (string): Video filename extension</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (string): Video identifier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string): Video title</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploader</span></code> (string): Full name of the video uploader</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upload_date</span></code> (string): Video upload date (YYYYMMDD)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string): Video URL</p></li>
+</ul>
+<p>However, I often use <code class="docutils literal notranslate"><span class="pre">-o</span></code> without <em>any</em> options, when I want to keep
+things simple and already know what video format it comes in. For
+example, I believe all of Twitter video has a <code class="docutils literal notranslate"><span class="pre">.mp4</span></code> extension, so I
+can just do:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ youtube-dl -o <span class="s2">&quot;testvid.mp4&quot;</span> https://twitter.com/US_FDA/status/1288806553177321473
+</pre></div>
+</div>
+<p>Here’s how to download a video from Reddit, using the unique ID in the
+URL and whatever format Reddit delivers video in:</p>
+<p>With Reddit, I don’t know for sure what video formats it might put out.
+Here’s how I’d set the file name but leave the extension for youtube-dl
+to fill out:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -o <span class="s1">&#39;mytest.%(ext)s&#39;</span> https://www.reddit.com/r/test/comments/i0eyye/test_bash_cow_say_video_has_audio/
+</pre></div>
+</div>
+<p>Or, if I’m too lazy to come up with a name for the video, I can have a
+template that includes the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the video – in the case of
+Twitter/Reddit, the unique ID that’s in the URL:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -o <span class="s1">&#39;%(id)s.%(ext)s&#39;</span> https://twitter.com/US_FDA/status/1288806553177321473
+</pre></div>
+</div>
+<p>Note that doing <code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">'%(id)s.%(ext)s'</span></code> is essentially the same as using
+the simple <code class="docutils literal notranslate"><span class="pre">--id</span></code> option. But a common and good reason for using
+<code class="docutils literal notranslate"><span class="pre">-o</span></code> might be wanting to save a file to a different directory than
+your current working directory:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir -p tweeted
+
+youtube-dl -o <span class="s1">&#39;tweeted/%(id)s.%(ext)s&#39;</span> https://twitter.com/US_FDA/status/1288806553177321473
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="batch-download-a-list-of-urls-from-file">
+<h2><a class="toc-backref" href="#id10">Batch download a list of URLs from file</a><a class="headerlink" href="#batch-download-a-list-of-urls-from-file" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">batch</span><span class="o">-</span><span class="n">file</span> <span class="n">FILE</span>            <span class="n">File</span> <span class="n">containing</span> <span class="n">URLs</span> <span class="n">to</span> <span class="n">download</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="k">for</span>
+                                 <span class="n">stdin</span><span class="p">),</span> <span class="n">one</span> <span class="n">URL</span> <span class="n">per</span> <span class="n">line</span><span class="o">.</span> <span class="n">Lines</span> <span class="n">starting</span>
+                                 <span class="k">with</span> <span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span> <span class="ow">or</span> <span class="s1">&#39;]&#39;</span> <span class="n">are</span> <span class="n">considered</span> <span class="k">as</span>
+                                 <span class="n">comments</span> <span class="ow">and</span> <span class="n">ignored</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>For most people, being able to download videos one URL at a time is
+probably good enough. In fact, I’ve never had a need to do a batch
+download until writing this tutorial.</p>
+<p>But there may be a day when a lot of stuff is happening, enough that
+you’re using a spreadsheet to track URLs. And now you want a slightly
+more convenient way to get everything than to run every command
+manually.</p>
+<p>That’s a usecase for the <code class="docutils literal notranslate"><span class="pre">--batch-file</span></code> option, or <code class="docutils literal notranslate"><span class="pre">-a</span></code> for short.</p>
+<p>Let’s say I have a list of URLs like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dancow</span><span class="o">/</span><span class="n">status</span><span class="o">/</span><span class="mi">1288678874084265985</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">US_FDA</span><span class="o">/</span><span class="n">status</span><span class="o">/</span><span class="mi">1288806553177321473</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">WhiteHouse</span><span class="o">/</span><span class="n">status</span><span class="o">/</span><span class="mi">1286065522220716032</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">reddit</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">r</span><span class="o">/</span><span class="n">newsbloopers</span><span class="o">/</span><span class="n">comments</span><span class="o">/</span><span class="n">hp9xff</span><span class="o">/</span><span class="n">serious_interview_turns_to_giggles_thanks_to_a</span><span class="o">/</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">imdb</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">video</span><span class="o">/</span><span class="n">vi2287451929</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">facebook</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">63811549237</span><span class="o">/</span><span class="n">videos</span><span class="o">/</span><span class="mi">10155075989594238</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">reddit</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">r</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">comments</span><span class="o">/</span><span class="n">i0eyye</span><span class="o">/</span><span class="n">test_bash_cow_say_video_has_audio</span><span class="o">/</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Twitter</span><span class="o">/</span><span class="n">status</span><span class="o">/</span><span class="mi">560070183650213889</span>
+</pre></div>
+</div>
+<p>And I’ve saved that list to a plain text file (<a class="reference external" href="#marker-plain-text-how">read this prior section
+if you don’t have a text editor yet</a>) in my
+current working directory as <code class="docutils literal notranslate"><span class="pre">vidlist.txt</span></code></p>
+<p>I should be able to download all of those URLs with a single command:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -a vidlist.txt
+</pre></div>
+</div>
+<p>Or, if I want them downloaded in a more orderly fashion, I can add the
+<code class="docutils literal notranslate"><span class="pre">-o</span></code> for a filename template, e.g. video id and upload date:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -a vidlist.txt  -o <span class="s2">&quot;%(upload_date)s-%(id)s.%(ext)s&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="miscellaneous-flags">
+<h2><a class="toc-backref" href="#id11">Miscellaneous flags</a><a class="headerlink" href="#miscellaneous-flags" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="use-no-mtime-to-update-the-last-modified-attribute-of-downloaded-videos">
+<h3><a class="toc-backref" href="#id12">Use <code class="docutils literal notranslate"><span class="pre">--no-mtime</span></code> to update the last-modified attribute of downloaded videos</a><a class="headerlink" href="#use-no-mtime-to-update-the-last-modified-attribute-of-downloaded-videos" title="Permalink to this headline">¶</a></h3>
+<p>If you use youtube-dl to download a really old video, by default,
+youtube-dl will give it a “Last modified date” equal to when the video
+was uplaoded.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">mtime</span>                       <span class="n">Do</span> <span class="ow">not</span> <span class="n">use</span> <span class="n">the</span> <span class="n">Last</span><span class="o">-</span><span class="n">modified</span> <span class="n">header</span> <span class="n">to</span> <span class="nb">set</span>
+                                 <span class="n">the</span> <span class="n">file</span> <span class="n">modification</span> <span class="n">time</span>
+</pre></div>
+</div>
+<p>If you’re like me, in which you have your files sorted by
+last-modified-most-recent, and you’re downloading files into a folder
+with a ton of other files, e.g. <code class="docutils literal notranslate"><span class="pre">~/Downloads</span></code> – then it’s kind of
+annoying to look for a video you <em>just</em> downloaded, expecting it to be
+at the top by “most recent” but finding it in the middle because the
+video was produced years ago.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">--no-mtime</span></code> flag will set the file’s last-modified time to
+when you downloaded it.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl --no-mtime https://twitter.com/Twitter/status/560070183650213889
+</pre></div>
+</div>
+</div>
+<div class="section" id="listing-and-specifying-formats">
+<h3><a class="toc-backref" href="#id13">Listing and specifying formats</a><a class="headerlink" href="#listing-and-specifying-formats" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="nb">format</span> <span class="n">FORMAT</span>              <span class="n">Video</span> <span class="nb">format</span> <span class="n">code</span><span class="p">,</span> <span class="n">see</span> <span class="n">the</span> <span class="s2">&quot;FORMAT</span>
+                                 <span class="n">SELECTION</span><span class="s2">&quot; for all the info</span>
+<span class="o">-</span><span class="n">F</span><span class="p">,</span> <span class="o">--</span><span class="nb">list</span><span class="o">-</span><span class="n">formats</span>               <span class="n">List</span> <span class="nb">all</span> <span class="n">available</span> <span class="n">formats</span> <span class="n">of</span> <span class="n">requested</span>
+                                 <span class="n">videos</span>
+</pre></div>
+</div>
+<p>Various sites use different media formats, and some of these sites use
+more than one format for whatever reason. Speaking for myself, I’m
+usually fine with whatever youtube-dl picks for me. But just in case
+you’re curious what’s available for a given URL.</p>
+<p>For example, for this reddit URL:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -F <span class="s1">&#39;https://www.reddit.com/r/test/comments/i0eyye/&#39;</span>
+</pre></div>
+</div>
+<p>(Note that <code class="docutils literal notranslate"><span class="pre">-F</span></code> only outputs the list of media formats; it does <em>not</em>
+attempt to download any video or other files)</p>
+<p>From the output, we see that reddit provides a variety of video
+formats/sizes, and in fact, also serves audio and video separately:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">RedditR</span><span class="p">]</span> <span class="n">i0eyye</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">JSON</span> <span class="n">metadata</span>
+<span class="p">[</span><span class="n">Reddit</span><span class="p">]</span> <span class="mi">8</span><span class="n">v1ezoig0xd51</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">m3u8</span> <span class="n">information</span>
+<span class="p">[</span><span class="n">Reddit</span><span class="p">]</span> <span class="mi">8</span><span class="n">v1ezoig0xd51</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">MPD</span> <span class="n">manifest</span>
+<span class="p">[</span><span class="n">info</span><span class="p">]</span> <span class="n">Available</span> <span class="n">formats</span> <span class="k">for</span> <span class="mi">8</span><span class="n">v1ezoig0xd51</span><span class="p">:</span>
+<span class="nb">format</span> <span class="n">code</span>         <span class="n">extension</span>  <span class="n">resolution</span> <span class="n">note</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">0</span><span class="o">-</span><span class="n">audio_0</span>       <span class="n">mp4</span>        <span class="n">audio</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">audio_1</span>       <span class="n">mp4</span>        <span class="n">audio</span> <span class="n">only</span>
+<span class="n">dash</span><span class="o">-</span><span class="n">audio_0_28017</span>  <span class="n">m4a</span>        <span class="n">audio</span> <span class="n">only</span> <span class="n">DASH</span> <span class="n">audio</span>   <span class="mi">28</span><span class="n">k</span> <span class="p">,</span> <span class="n">m4a_dash</span> <span class="n">container</span><span class="p">,</span> <span class="n">mp4a</span><span class="o">.</span><span class="mf">40.2</span> <span class="p">(</span><span class="mi">48000</span><span class="n">Hz</span><span class="p">)</span>
+<span class="n">dash</span><span class="o">-</span><span class="n">video_26790</span>    <span class="n">mp4</span>        <span class="mi">172</span><span class="n">x76</span>     <span class="n">DASH</span> <span class="n">video</span>   <span class="mi">26</span><span class="n">k</span> <span class="p">,</span> <span class="n">mp4_dash</span> <span class="n">container</span><span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">4</span><span class="n">D400D</span><span class="p">,</span> <span class="mi">30</span><span class="n">fps</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">dash</span><span class="o">-</span><span class="n">video_68389</span>    <span class="n">mp4</span>        <span class="mi">426</span><span class="n">x190</span>    <span class="n">DASH</span> <span class="n">video</span>   <span class="mi">68</span><span class="n">k</span> <span class="p">,</span> <span class="n">mp4_dash</span> <span class="n">container</span><span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">4</span><span class="n">D401E</span><span class="p">,</span> <span class="mi">30</span><span class="n">fps</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">97</span>              <span class="n">mp4</span>        <span class="mi">480</span><span class="n">x214</span>      <span class="mi">97</span><span class="n">k</span> <span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">42001</span><span class="n">e</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">103</span>             <span class="n">mp4</span>        <span class="mi">400</span><span class="n">x178</span>     <span class="mi">103</span><span class="n">k</span> <span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">42001</span><span class="n">e</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">dash</span><span class="o">-</span><span class="n">video_104434</span>   <span class="n">mp4</span>        <span class="mi">640</span><span class="n">x286</span>    <span class="n">DASH</span> <span class="n">video</span>  <span class="mi">104</span><span class="n">k</span> <span class="p">,</span> <span class="n">mp4_dash</span> <span class="n">container</span><span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">4</span><span class="n">D401E</span><span class="p">,</span> <span class="mi">30</span><span class="n">fps</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">111</span>             <span class="n">mp4</span>        <span class="mi">480</span><span class="n">x214</span>     <span class="mi">111</span><span class="n">k</span> <span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">42001</span><span class="n">e</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">117</span>             <span class="n">mp4</span>        <span class="mi">400</span><span class="n">x178</span>     <span class="mi">117</span><span class="n">k</span> <span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">42001</span><span class="n">e</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span> <span class="p">(</span><span class="n">best</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If for some reason we wanted the lowest quality video – a 172x76
+resolution mp4 video – we use the <code class="docutils literal notranslate"><span class="pre">-f</span></code> flag and refer to the
+corresponding format code, e.g. <code class="docutils literal notranslate"><span class="pre">dash-video_26790</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">youtube</span><span class="o">-</span><span class="n">dl</span> <span class="o">-</span><span class="n">f</span> <span class="s1">&#39;dash-video_26790&#39;</span> <span class="o">-</span><span class="n">o</span> <span class="n">yuck</span><span class="o">.</span><span class="n">mp4</span>  <span class="s1">&#39;https://www.reddit.com/r/test/comments/i0eyye/&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-the-associated-metadata">
+<h3><a class="toc-backref" href="#id14">Download the associated metadata</a><a class="headerlink" href="#download-the-associated-metadata" title="Permalink to this headline">¶</a></h3>
+<p>If you’re archiving online video, you might find it useful to also keep
+download associated assets and metadata. youtube-dl has some options for
+that:</p>
+<p>To save a copy of a video thumbnail, often the URL’s preview image:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">thumbnail</span>                <span class="n">Write</span> <span class="n">thumbnail</span> <span class="n">image</span> <span class="n">to</span> <span class="n">disk</span>
+</pre></div>
+</div>
+<p>To write a whole bunch of metadata in JSON format to a JSON text file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">info</span><span class="o">-</span><span class="n">json</span>                <span class="n">Write</span> <span class="n">video</span> <span class="n">metadata</span> <span class="n">to</span> <span class="n">a</span> <span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">json</span> <span class="n">file</span>
+</pre></div>
+</div>
+<p>For sites that have “description” fields, this saves it to a text file
+with a <code class="docutils literal notranslate"><span class="pre">.description</span></code> extension</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">description</span>              <span class="n">Write</span> <span class="n">video</span> <span class="n">description</span> <span class="n">to</span> <span class="n">a</span> <span class="o">.</span><span class="n">description</span>
+                                 <span class="n">file</span>
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir -p twitfoo
+
+youtube-dl -o twitfoo/test.mp4 --write-thumbnail --write-info-json --write-description <span class="s1">&#39;https://twitter.com/Twitter/status/560070183650213889&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-subtitles">
+<h3><a class="toc-backref" href="#id15">Download subtitles</a><a class="headerlink" href="#download-subtitles" title="Permalink to this headline">¶</a></h3>
+<p>A few sites supported by youtube-dl have subtitles. YouTube is an
+obvious example. Various news sites do too.</p>
+<p>To download a URL’s video and any and all of its subtitles files:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -o abcnews.mp4 --all-subs https://abcnews.go.com/Health/video/trump-encourages-americans-donate-plasma-72086787
+</pre></div>
+</div>
+<p>Alternatively, you also have the option to download just the subtitle
+files, and no video/media, by using the <code class="docutils literal notranslate"><span class="pre">--skip-download</span></code> option:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl --skip-download --all-subs https://abcnews.go.com/Health/video/trump-encourages-americans-donate-plasma-72086787
+</pre></div>
+</div>
+<p>In the output, we can see that no video file has been saved, just a
+<code class="docutils literal notranslate"><span class="pre">.ttml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">abcnews</span><span class="p">:</span><span class="n">video</span><span class="p">]</span> <span class="n">Downloading</span> <span class="n">Akamai</span> <span class="n">AMP</span> <span class="n">feed</span>
+<span class="p">[</span><span class="n">abcnews</span><span class="p">:</span><span class="n">video</span><span class="p">]</span> <span class="mi">72086787</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">f4m</span> <span class="n">manifest</span>
+<span class="p">[</span><span class="n">abcnews</span><span class="p">:</span><span class="n">video</span><span class="p">]</span> <span class="mi">72086787</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">m3u8</span> <span class="n">information</span>
+<span class="p">[</span><span class="n">info</span><span class="p">]</span> <span class="n">Writing</span> <span class="n">video</span> <span class="n">subtitles</span> <span class="n">to</span><span class="p">:</span> <span class="n">Trump</span> <span class="n">encourages</span> <span class="n">Americans</span> <span class="n">to</span> <span class="n">donate</span> <span class="n">plasma</span><span class="o">-</span><span class="mf">72086787.</span><span class="n">en</span><span class="o">.</span><span class="n">ttml</span>
+</pre></div>
+</div>
+<p>If you open that <code class="docutils literal notranslate"><span class="pre">ttml</span></code> file in a text editor, you can see that it’s
+some kind of timestamped transcript format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">caption</span><span class="o">&gt;&lt;</span><span class="n">tt</span><span class="o">&gt;&lt;</span><span class="n">body</span><span class="o">&gt;&lt;</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:00.009&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:03.064&quot;</span> <span class="o">&gt;</span>
+<span class="n">They</span><span class="s1">&#39;re doing magnificent job at the recruit some delighted to &lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:03.073&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:04.349&quot;</span> <span class="o">&gt;</span>
+<span class="n">be</span> <span class="n">here</span><span class="o">.</span> <span class="n">To</span> <span class="n">discuss</span> <span class="n">the</span> <span class="n">remarkable</span> <span class="n">progress</span> <span class="n">being</span> <span class="n">made</span> <span class="ow">in</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:08.079&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:06.999&quot;</span> <span class="o">&gt;</span>
+<span class="n">the</span> <span class="n">development</span> <span class="n">of</span> <span class="n">close</span> <span class="n">plaza</span> <span class="n">so</span> <span class="n">important</span> <span class="n">therapies</span><span class="o">.</span> <span class="n">These</span> <span class="n">therapies</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:14.139&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:05.001&quot;</span> <span class="o">&gt;</span>
+<span class="n">tranche</span> <span class="ow">is</span> <span class="n">powerful</span> <span class="n">antibodies</span><span class="o">.</span> <span class="n">From</span> <span class="n">the</span> <span class="n">blood</span> <span class="n">of</span> <span class="n">recovered</span> <span class="n">patients</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:19.239&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:05.009&quot;</span> <span class="o">&gt;</span>
+<span class="n">to</span> <span class="n">help</span> <span class="n">treat</span> <span class="n">those</span> <span class="n">battling</span> <span class="n">the</span> <span class="n">current</span> <span class="n">infection</span><span class="o">.</span> <span class="n">That</span> <span class="n">we</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="999-misc.html" class="btn btn-neutral float-right" title="More fun with more tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="020-basics.html" class="btn btn-neutral float-left" title="youtube-dl and command-line basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Dan Nguyen
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

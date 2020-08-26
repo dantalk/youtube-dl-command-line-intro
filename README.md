@@ -3,4 +3,7 @@
 
 
 
-The accompanying guide is here: [guides/mainguide.md](guides/mainguide.md)
+Read the full guide at: [dantalk.github.io/youtube-dl-command-line-intro](//dantalk.github.io/youtube-dl-command-line-intro)
+
+
+Twitch link TK: https://twitch.tv/NicolasCageFight

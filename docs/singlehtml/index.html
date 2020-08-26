@@ -1,0 +1,1022 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Intro to using the command-line and youtube-dl Notes 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://dantalk.github.io/youtube-dl-command-line-introindex.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> Intro to using the command-line and youtube-dl Notes
+          
+
+          
+          </a>
+
+          
+
+          
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/000-intro">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#tl-dr-what-is-youtube-dl-and-how-do-you-use-it">tl;dr: What is <code class="docutils literal notranslate"><span class="pre">youtube-dl</span></code> and how do you use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#why-does-youtube-dl-exist">Why does youtube-dl exist?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#what-is-terminal-shell-and-the-command-line">What is “Terminal/shell” and the “command-line”?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#why-bother-with-youtube-dl-or-the-command-line-at-all">Why bother with youtube-dl, or the command-line at all?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/010-setup">Getting installed and ready</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#how-to-open-your-operating-systems-shell-terminal">How to open your operating system’s shell/Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#installing-youtube-dl">Installing youtube-dl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#testing-if-youtube-dl-is-installed-and-working">Testing if youtube-dl is installed and working</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/020-basics">youtube-dl and command-line basics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#downloading-a-tweeted-video">Downloading a tweeted video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#plain-text-files-and-editors">Plain text files and editors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/030-common-options">Common youtube-dl options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#starting-out">Starting out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#control-how-the-downloaded-video-is-named-and-saved">Control how the downloaded video is named and saved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#batch-download-a-list-of-urls-from-file">Batch download a list of URLs from file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#miscellaneous-flags">Miscellaneous flags</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/999-misc">More fun with more tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#making-gifs-from-video-with-ffmpeg">Making gifs from video with ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#turning-video-into-gifs-with-gifsicle">Turning video into gifs with <code class="docutils literal notranslate"><span class="pre">gifsicle</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Intro to using the command-line and youtube-dl Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Intro to using the command-line and youtube-dl Notes 0.0.1 documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="learn-and-love-the-command-line-with-youtube-dl-one-day-at-a-time">
+<h1>Learn and love the command-line with youtube-dl, one day at a time<a class="headerlink" href="#learn-and-love-the-command-line-with-youtube-dl-one-day-at-a-time" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-content/000-intro"></span><div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#tl-dr-what-is-youtube-dl-and-how-do-you-use-it" id="id1">tl;dr: What is <code class="docutils literal notranslate"><span class="pre">youtube-dl</span></code> and how do you use it?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-why" id="id2">What/Why?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#why-does-youtube-dl-exist" id="id3">Why does youtube-dl exist?</a></p></li>
+<li><p><a class="reference internal" href="#what-is-terminal-shell-and-the-command-line" id="id4">What is “Terminal/shell” and the “command-line”?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#old-fashioned-video-downloading" id="id5">Old-fashioned video downloading</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#why-bother-with-youtube-dl-or-the-command-line-at-all" id="id6">Why bother with youtube-dl, or the command-line at all?</a></p></li>
+</ul>
+</div>
+<div class="section" id="tl-dr-what-is-youtube-dl-and-how-do-you-use-it">
+<h3><a class="toc-backref" href="#id1">tl;dr: What is <code class="docutils literal notranslate"><span class="pre">youtube-dl</span></code> and how do you use it?</a><a class="headerlink" href="#tl-dr-what-is-youtube-dl-and-how-do-you-use-it" title="Permalink to this headline">¶</a></h3>
+<p>Once you have youtube-dl installed, go into your operating system’s
+<strong>shell/Terminal</strong> and type the name of the program –
+i.e. <code class="docutils literal notranslate"><span class="pre">youtube-dl</span></code> – followed by the URL to download from, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ youtube-dl https://twitter.com/US_FDA/status/1288806553177321473
+</pre></div>
+</div>
+<p>Hit <strong>Enter</strong>, and <code class="docutils literal notranslate"><span class="pre">youtube-dl</span></code> will run: it’ll attempt to find the
+video in the URL you provided, and then download it to your computer:</p>
+<img alt="_images/youtubedl-tldr.gif" src="_images/youtubedl-tldr.gif" />
+<p>Where does it download? Wherever you ran <code class="docutils literal notranslate"><span class="pre">youtube-dl</span></code>. In the example
+above, I ran it from my “Home” directory, and so that’s where youtube-dl
+saves the video:</p>
+<img alt="_images/youtubedl-tldr-homesave.png" src="_images/youtubedl-tldr-homesave.png" />
+<p>How did it come up with that this long filename? By default, i.e. with
+no additional instructions from the user, and given a Twitter URL,
+youtube-dl will name the file based on the name of the tweeting user –
+<strong>U.S. FDA</strong>, followed by the text of the tweet, and then the unique ID
+of the tweet (found in the tweet’s URL), and finally, the file type:
+<code class="docutils literal notranslate"><span class="pre">.mp4</span></code></p>
+<blockquote>
+<div><p>U.S. FDA - Are you a restaurant owner preparing to reopen your
+business Help keep your food and customers safe by making sure you
+wear the appropriate face covering –1288806553177321473.mp4</p>
+</div></blockquote>
+<div class="section" id="what-why">
+<h4><a class="toc-backref" href="#id2">What/Why?</a><a class="headerlink" href="#what-why" title="Permalink to this headline">¶</a></h4>
+<p>TK</p>
+</div>
+</div>
+<div class="section" id="why-does-youtube-dl-exist">
+<h3><a class="toc-backref" href="#id3">Why does youtube-dl exist?</a><a class="headerlink" href="#why-does-youtube-dl-exist" title="Permalink to this headline">¶</a></h3>
+<p>The description on its
+<a class="reference external" href="https://ytdl-org.github.io/youtube-dl/index.html">homepage</a> says it
+all:</p>
+<blockquote>
+<div><p>youtube-dl is a command-line program to download videos from
+YouTube.com and a few more sites.</p>
+</div></blockquote>
+<p>If you’re a journalist, and your coverage topic involves what’s
+happening online – including info conveyed through popular video, video
+which sometimes gets retracted/deleted – then being able to quickly and
+reliably capture video has an obvious usecase.</p>
+<p>But you don’t have to think in terms of work – maybe you just enjoy
+video, and you want to make a copy (if it’s legal to do so) for later
+viewing, or to send around, or to do a transformative work.</p>
+<p>Here’s an example of real people using youtube-dl, courtesy of this
+<a class="reference external" href="https://www.ottumwacourier.com/news/local_news/what-is-a-gif/article_c1d84944-e92a-11e5-a095-eb219cc6cd71.html">2016 Ottumwa Courier article titled, What is a
+GIF</a></p>
+<blockquote>
+<div><p>In honor of National Teen Tech Week, the Ottumwa Public Library
+offered a session on GIF making for local teens Saturday afternoon.</p>
+</div></blockquote>
+<blockquote>
+<div><p>[OPL Assistant Director Ron Houk] walked each of the teens through
+the steps required for making GIFs by using movie trailers found on
+YouTube. He then had the kids copy the web address and use the
+program youtube-dl to download the video. OPL also provided flash
+drives for each person so they could access the program at home.</p>
+<p>Kirking said the process appears more complicated than it actually
+is. Like Houk, Kirking believes the more exposure teens get to
+certain programs, the easier it will be for them to expand on those
+original ideas in the future.</p>
+</div></blockquote>
+</div>
+<div class="section" id="what-is-terminal-shell-and-the-command-line">
+<h3><a class="toc-backref" href="#id4">What is “Terminal/shell” and the “command-line”?</a><a class="headerlink" href="#what-is-terminal-shell-and-the-command-line" title="Permalink to this headline">¶</a></h3>
+<p>TK Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+animi? In neque architecto ex voluptatibus qui officiis illo, at a,
+soluta non, totam, dignissimos saepe reprehenderit maxime ut ducimus
+unde.</p>
+<div class="section" id="old-fashioned-video-downloading">
+<h4><a class="toc-backref" href="#id5">Old-fashioned video downloading</a><a class="headerlink" href="#old-fashioned-video-downloading" title="Permalink to this headline">¶</a></h4>
+<p>Doing something via a command-line tool like youtube-dl is just another
+way to do something you might already have a way to do – and this
+includes “old-fashioned” point-and-clicking, whether it’s through a
+program you download or a website in your web browser.</p>
+<p>For example, a popular site that offers the service of helping you
+download Twitter video is: <a class="reference external" href="https://twdownloader.net">https://twdownloader.net</a></p>
+<img alt="_images/twdownloadsite-home.png" src="_images/twdownloadsite-home.png" />
+<p>The site takes you to download screen, which is basically buttons that
+directly link to the video file(s), which you can then download by
+clicking <strong>“Save Link as…”</strong></p>
+<img alt="_images/twdownloadsite-saveas.png" src="_images/twdownloadsite-saveas.png" />
+<p>There are even bots that automate this process, such as <a class="reference external" href="https://twitter.com/DownloaderBot">&#64;DownloaderBot</a></p>
+<blockquote>
+<div><p>I’m here to help you download twitter videos and gifs easily. Mention
+me in any tweet that contains a video or gif and I’ll reply with link
+within seconds!</p>
+</div></blockquote>
+<p>If you send a tweet mentioning &#64;DownloaderBot and a tweet URL:</p>
+<img alt="_images/twdownloaderbot-mention.png" src="_images/twdownloaderbot-mention.png" />
+<p>TK:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>may have to refer to a different bot
+
+– it responds with a link you can “Save Link as…”:
+
+TKTK
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="why-bother-with-youtube-dl-or-the-command-line-at-all">
+<h3><a class="toc-backref" href="#id6">Why bother with youtube-dl, or the command-line at all?</a><a class="headerlink" href="#why-bother-with-youtube-dl-or-the-command-line-at-all" title="Permalink to this headline">¶</a></h3>
+<p>For starters, one of youtube-dl’s big features is that it’s been adapted
+to work with many video sites (here’s its <a class="reference external" href="https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md">list of supported
+sites</a>),
+including:</p>
+<ul class="simple">
+<li><p>Reddit
+<a class="reference external" href="https://www.reddit.com/r/test/comments/i0eyye/test_bash_cow_say_video_has_audio/">https://www.reddit.com/r/test/comments/i0eyye/test_bash_cow_say_video_has_audio/</a></p></li>
+<li><p>IMDB movie trailers: <a class="reference external" href="https://www.imdb.com/trailers/">https://www.imdb.com/trailers/</a></p></li>
+</ul>
+<p>Do all these sites have corresponding services like
+<code class="docutils literal notranslate"><span class="pre">twdownloader.net</span></code>? Maybe, but it’s probably a hassle to find out and
+keep track, especially for casual impromptu usage.</p>
+<p><em>“But there’s an app for that!”</em> – this is true:</p>
+<img alt="_images/apps-to-download-video-search.png" src="_images/apps-to-download-video-search.png" />
+<p>But besides the hassle (and concerns) of downloading apps/programs to
+handle your web activity*, many of these apps use youtube-dl to do the
+work – i.e. the apps are basically a pretty graphical front-end.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Note</strong>: So <strong>youtube-dl</strong> is most definitely an app/program that
+you’re entrusting your web activity to when using it. But as an
+extremely popular – i.e. extremely <em>watched</em> <a class="reference external" href="https://github.com/ytdl-org/youtube-dl/">open source application
+on Github</a>, there’s at
+least a <em>little</em> assurance that there’s a community of users who know
+its code and are watching for problems.</p>
+<p>In any case, using <strong>youtube-dl</strong> by itself, versus youtube-dl + some
+closed app that provides a graphical wrapping around it, means you at
+least cut out a middleman.</p>
+</div>
+<p>Of course, the tradeoff is: you have to learn a spartan interface that
+suspiciously looks like “programming” or “code”, and it’s definitely a
+cognitive task. The rest of this walkthrough is to make the case that
+the work is worth it.</p>
+</div>
+</div>
+<span id="document-content/010-setup"></span><div class="section" id="getting-installed-and-ready">
+<h2>Getting installed and ready<a class="headerlink" href="#getting-installed-and-ready" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#how-to-open-your-operating-systems-shell-terminal" id="id1">How to open your operating system’s shell/Terminal</a></p>
+<ul>
+<li><p><a class="reference internal" href="#macos-terminal" id="id2">macOS Terminal</a></p></li>
+<li><p><a class="reference internal" href="#windows-powershell" id="id3">Windows PowerShell</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#installing-youtube-dl" id="id4">Installing youtube-dl</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installing-youtube-dl-if-you-have-python-installed" id="id5">Installing youtube-dl if you have Python installed</a></p>
+<ul>
+<li><p><a class="reference internal" href="#how-to-install-python-on-your-system-if-you-dont-already-have-it" id="id6">How to install Python on your system if you don’t already have it</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#installing-youtube-dl-on-macos-linux-using-homebrew" id="id7">Installing youtube-dl on macOS/Linux using homebrew</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#testing-if-youtube-dl-is-installed-and-working" id="id8">Testing if youtube-dl is installed and working</a></p></li>
+</ul>
+</div>
+<div class="section" id="how-to-open-your-operating-systems-shell-terminal">
+<h3><a class="toc-backref" href="#id1">How to open your operating system’s shell/Terminal</a><a class="headerlink" href="#how-to-open-your-operating-systems-shell-terminal" title="Permalink to this headline">¶</a></h3>
+<p>This section covers just how to find and open your operating system’s
+command-line interface, also referred to as Terminal on macOS, or
+PowerShell/cmd.exe for Windows; or, more generally: the <strong>shell</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Note:</strong> In subsequent sections, I’ll just use “shell” to refer to
+your system’s command-line interface, whether you’re using, whether
+it’s Windows Powershell or macOS Terminal. Technically “shell” is not
+the exact nomenclature either (you might hear others talk about
+“bash” or “zsh”) but it’s good enough for now.</p>
+</div>
+<div class="section" id="macos-terminal">
+<h4><a class="toc-backref" href="#id2">macOS Terminal</a><a class="headerlink" href="#macos-terminal" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Note:</strong> Unfortunately, as a macOS user, you will need to use
+Terminal in order to install youtube-dl on macOS, which is why this
+section is <em>before</em> the how-to-install-youtube-dl…</p>
+</div>
+<p>If you know no other way to operate your computer other than how to
+point-and-click (which is <strong>a lot</strong>, mind you), the simplest way to find
+and open <strong>Terminal</strong> is to go into <strong>Spotlight</strong> (the system search
+bar) and type <code class="docutils literal notranslate"><span class="pre">Terminal.app</span></code>:</p>
+<img alt="_images/spotlight-terminal-app.png" src="_images/spotlight-terminal-app.png" />
+<p>Alternatively, open up <strong>Finder</strong> and click-navigate to your
+<strong>Applications</strong> folder, then to its subfolder, <strong>Utilities</strong>:</p>
+<img alt="_images/finder-terminal.png" src="_images/finder-terminal.png" />
+<p>Clicking on <strong>Terminal.app</strong> should pop open an application window that
+looks similar to what I have (but not exactly, since I’ve customized how
+Terminal looks, including the emoji in my prompt):</p>
+<img alt="_images/open-terminal.png" src="_images/open-terminal.png" />
+<p>If you’ve never run a Terminal command before, now’s your chance: type
+<code class="docutils literal notranslate"><span class="pre">pwd</span></code> and hit <strong>Enter</strong>:</p>
+<img alt="_images/open-terminal-pwd.png" src="_images/open-terminal-pwd.png" />
+<p><a class="reference external" href="https://www.tecmint.com/pwd-command-examples/">pwd</a> – short for
+‘print working directory’, is a command that simply prints to screen the
+name of “where you are” in your filesystem. By default, you should be at
+what’s called your <strong>home directory</strong>.</p>
+<p>What/where is “here”, or the “home directory” exactly? You can find out
+by executing a command named <code class="docutils literal notranslate"><span class="pre">open</span></code> followed by a whitespace
+(i.e. hitting Spacebar), and then an <strong>argument</strong> (“argument” is the
+word used to describe a value/thing you want the command to operate on).</p>
+<p>In this example, the argument is a single dot/period, which is shorthand
+for “<em>this directory</em>”</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>open .
+</pre></div>
+</div>
+<p>Typing the full name of your current working directory (i.e. what
+<code class="docutils literal notranslate"><span class="pre">pwd</span></code> produced, which was <code class="docutils literal notranslate"><span class="pre">/Users/dan</span></code> for me) would also work:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>open /Users/dan
+</pre></div>
+</div>
+<p>Either way, you should see a good ol <strong>Finder</strong> window pop open, showing
+you the list of files and folders in your home directory – you’re
+probably at least familiar with <code class="docutils literal notranslate"><span class="pre">Desktop</span></code>, <code class="docutils literal notranslate"><span class="pre">Downloads</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">Documents</span></code>:</p>
+<img alt="_images/open-terminal-pwd.png" src="_images/open-terminal-pwd.png" />
+<p>And that’s about all we need to know for now when it comes to using
+Terminal, i.e. your macOS <strong>shell</strong></p>
+</div>
+<div class="section" id="windows-powershell">
+<h4><a class="toc-backref" href="#id3">Windows PowerShell</a><a class="headerlink" href="#windows-powershell" title="Permalink to this headline">¶</a></h4>
+<p>I didn’t have the time to boot into Windows 10 and take screenshots. The
+best help I can give at this moment is: to open the PowerShell command
+line, go to the Windows Start Menu search bar and type <code class="docutils literal notranslate"><span class="pre">powershell</span></code></p>
+<p>Here’s a pretty good walkthrough (though it gets into technical terms a
+little too soon for my liking): <a class="reference external" href="https://www.guru99.com/powershell-tutorial.html">Guru99: Powershell Tutorial for
+Beginners: Learn in 1
+Day</a></p>
+<p>Here’s a <a class="reference external" href="https://youtu.be/IHrGresKu2w?t=172">popular YouTube tutorial by Shane
+Young</a></p>
+</div>
+</div>
+<div class="section" id="installing-youtube-dl">
+<h3><a class="toc-backref" href="#id4">Installing youtube-dl</a><a class="headerlink" href="#installing-youtube-dl" title="Permalink to this headline">¶</a></h3>
+<p>The official download and installation instructions can be <a class="reference external" href="https://ytdl-org.github.io/youtube-dl/download.html">found on the
+youtube-dl official
+site</a></p>
+<p>Unfortunately, the installation process for both Windows and macOS is
+not a simple click-and-install process, and may be downright confusing
+and intimidating if you’ve never used used the command-line. I apologize
+in advance if these brief instructions don’t get you anywhere; hopefully
+it’s some small comfort to know that the installation process is often
+the most difficult and confusing part of learning new tools</p>
+<div class="section" id="installing-youtube-dl-if-you-have-python-installed">
+<h4><a class="toc-backref" href="#id5">Installing youtube-dl if you have Python installed</a><a class="headerlink" href="#installing-youtube-dl-if-you-have-python-installed" title="Permalink to this headline">¶</a></h4>
+<p><strong>If you already have Python installed (macOS/Windows/Linux)</strong></p>
+<p>If you’ve been using <strong>macOS</strong> before 10.15 i.e. Catalina, your system
+<em>should</em> already have Python installed. Otherwise, you <em>might</em> have
+Python installed for some other reason, such as being a dependency for
+some other thing you’ve installed, or maybe you’ve tried learning to
+code.</p>
+<p>In any case, the easiest way to find out is to open your system shell
+and execute the command, <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>, which should print out
+something like <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">2.7.17</span></code>:</p>
+<p>If that’s the case, then installing youtube-dl should be as easy as
+running this command:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo pip install --upgrade youtube-dl
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note: The <code class="docutils literal notranslate"><span class="pre">sudo</span></code> command will probably prompt you for your password
+– this is the password you use to log into your computer</p>
+</div>
+<p>And if the <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> command works, you’ll get output that looks
+like this, likely with warnings that (hopefully) you can ignore:</p>
+<img alt="_images/sudo-pip-install-youtubedl.png" src="_images/sudo-pip-install-youtubedl.png" />
+<p>And if that seemed to work, skip ahead to the section titled, “Testing
+if youtube-dl is installed and working” TKref</p>
+<div class="section" id="how-to-install-python-on-your-system-if-you-dont-already-have-it">
+<h5><a class="toc-backref" href="#id6">How to install Python on your system if you don’t already have it</a><a class="headerlink" href="#how-to-install-python-on-your-system-if-you-dont-already-have-it" title="Permalink to this headline">¶</a></h5>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note: obviously skip this section if you already have Python
+installed.</p>
+</div>
+</div>
+</div>
+<div class="section" id="installing-youtube-dl-on-macos-linux-using-homebrew">
+<h4><a class="toc-backref" href="#id7">Installing youtube-dl on macOS/Linux using homebrew</a><a class="headerlink" href="#installing-youtube-dl-on-macos-linux-using-homebrew" title="Permalink to this headline">¶</a></h4>
+<p>If the python i.e. <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> method didn’t work <strong>and you’re on
+macOS</strong> (or Linux apparently, I haven’t tried it out), then maybe the
+more reliable (and common) way to install youtube-dl is by installing
+another program called <strong>homebrew</strong>.</p>
+<p><strong>homebrew</strong> is a command-line package manager, i.e. a shell program
+that manages the installation of other programs, and you can find the
+installation on Homebrew’s homepage: <a class="reference external" href="https://brew.sh/">https://brew.sh/</a></p>
+<p>As of July 2020, the copy-paste one-liner to execute in your shell is:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note:</strong> normally, you should not be copy-pasting commands that you
+<em>totally</em> do not understand, like the one above. Please check the
+<a class="reference external" href="https://brew.sh/">Homebrew homepage</a> yourself to see what it says
+– the command may have changed since I posted it here; also, the
+homepage gives some description about what’s happening…</p>
+</div></blockquote>
+<p><strong>If</strong> that worked, then installing youtube-dl should be as easy as this
+command:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew install youtube-dl
+</pre></div>
+</div>
+<p>You’ll hopefully get output that looks like this:</p>
+<img alt="_images/brew-install-youtubedl.png" src="_images/brew-install-youtubedl.png" />
+<p>TKTKTK</p>
+</div>
+</div>
+<div class="section" id="testing-if-youtube-dl-is-installed-and-working">
+<h3><a class="toc-backref" href="#id8">Testing if youtube-dl is installed and working</a><a class="headerlink" href="#testing-if-youtube-dl-is-installed-and-working" title="Permalink to this headline">¶</a></h3>
+<p>The easiest way to tell if <code class="docutils literal notranslate"><span class="pre">youtube-dl</span></code> is installed and working is to
+run it with a version check, i.e.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl --version
+</pre></div>
+</div>
+</div>
+</div>
+<span id="document-content/020-basics"></span><div class="section" id="youtube-dl-and-command-line-basics">
+<h2>youtube-dl and command-line basics<a class="headerlink" href="#youtube-dl-and-command-line-basics" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#downloading-a-tweeted-video" id="id1">Downloading a tweeted video</a></p>
+<ul>
+<li><p><a class="reference internal" href="#simple-shell-commands-and-concepts" id="id2">Simple shell commands and concepts</a></p></li>
+<li><p><a class="reference internal" href="#keyboard-things" id="id3">Keyboard things</a></p></li>
+<li><p><a class="reference internal" href="#simple-commands" id="id4">Simple commands</a></p></li>
+<li><p><a class="reference internal" href="#make-a-worky-directory" id="id5">Make a <code class="docutils literal notranslate"><span class="pre">worky</span></code> directory</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#plain-text-files-and-editors" id="id6">Plain text files and editors</a></p></li>
+</ul>
+</div>
+<p>Hopefully by now you’ve been able to find and open your system shell and
+successfully install youtube-dl. This section will run through the
+simplest examples of youtube-dl, which is good enough to get you 80%-99%
+of its total utility, depending on your everyday work and usecases.</p>
+<p>And then we’ll go over some basic concepts of the command-line (like,
+what are “flags”, and the importance of whitespace), which is helpful to
+be acquainted with before doing more complicated youtube-dl.</p>
+<div class="section" id="downloading-a-tweeted-video">
+<h3><a class="toc-backref" href="#id1">Downloading a tweeted video</a><a class="headerlink" href="#downloading-a-tweeted-video" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://twitter.com/dancow/status/1288678874084265985">https://twitter.com/dancow/status/1288678874084265985</a></p>
+<p>Or if you prefer White House media:
+<a class="reference external" href="https://twitter.com/WhiteHouse/status/1286065522220716032">https://twitter.com/WhiteHouse/status/1286065522220716032</a></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ youtube-dl https://twitter.com/dancow/status/1288678874084265985
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>What the output means</p></li>
+<li><p>How to list/find/open the file</p></li>
+</ul>
+<div class="section" id="simple-shell-commands-and-concepts">
+<h4><a class="toc-backref" href="#id2">Simple shell commands and concepts</a><a class="headerlink" href="#simple-shell-commands-and-concepts" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p><strong>Note:</strong> from here on out, when I type out shell commands, I’ll
+typically prepend them with a dollar sign <code class="docutils literal notranslate"><span class="pre">$</span></code>, which represents the
+system prompt – i.e. do not copy and paste the <code class="docutils literal notranslate"><span class="pre">$</span></code> at the beginning
+of example commands</p>
+</div></blockquote>
+</div>
+<div class="section" id="keyboard-things">
+<h4><a class="toc-backref" href="#id3">Keyboard things</a><a class="headerlink" href="#keyboard-things" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>tab to autocomplete</p></li>
+<li><p>up to go through history</p></li>
+<li><p>whitespace matters!</p></li>
+</ul>
+</div>
+<div class="section" id="simple-commands">
+<h4><a class="toc-backref" href="#id4">Simple commands</a><a class="headerlink" href="#simple-commands" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">.</span></code> on macOS to open a directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">file.mp4</span></code> to open a file with the dedicated app</p></li>
+<li><p>ls to list files</p></li>
+<li><p>how to cd</p>
+<ul>
+<li><p>cd ~ (to get home)</p></li>
+<li><p>cd ~/Desktop (to get to your desktop)</p></li>
+</ul>
+</li>
+<li><p>how to mkdir</p></li>
+</ul>
+</div>
+<div class="section" id="make-a-worky-directory">
+<h4><a class="toc-backref" href="#id5">Make a <code class="docutils literal notranslate"><span class="pre">worky</span></code> directory</a><a class="headerlink" href="#make-a-worky-directory" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ mkdir ~/Desktop/worky
+$ <span class="nb">cd</span> ~/Desktop/worky
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="plain-text-files-and-editors">
+<h3><a class="toc-backref" href="#id6">Plain text files and editors</a><a class="headerlink" href="#plain-text-files-and-editors" title="Permalink to this headline">¶</a></h3>
+<p>Elsewhere in this lesson, I’ll refer to creating/writing/reading a text
+file, e.g. <code class="docutils literal notranslate"><span class="pre">vidlist.txt</span></code>. If you’re new to the command-line and also
+new to programming, you might not be familiar with the concept of a
+<strong>plain text editor</strong> or <strong>plain text</strong> files.</p>
+<p>It’s kind of complicated, but the important thing is: Rich text editors,
+including word processors like Microsoft Word and macOS Pages, typically
+<em>do not</em> create/write/read <strong>plain text</strong> files in a straightforward
+way.</p>
+<p>If you want to use what comes with your operating system, then use:</p>
+<ul class="simple">
+<li><p><strong>Notepad</strong> if you’re on Windows (not sure if it’s part of Win10 or
+if you have to get it from the
+<a class="reference external" href="https://www.microsoft.com/en-us/p/windows-notepad/9msmlrh6lzf3?activetab=pivot:overviewtab">store</a>)</p></li>
+<li><p><strong>TextEdit</strong> on <strong>macOS</strong> – however, you must jump through <a class="reference external" href="https://apple.stackexchange.com/questions/342310/how-can-one-save-a-file-as-plain-text-in-textedit">some
+annoying hoops to actually save the
+file</a>
+as <strong>plain text</strong></p></li>
+</ul>
+<p><strong>However</strong>, I highly recommend downloading and installing a dedicated
+code editor – like Microsoft’s free, powerful, and cross-platform Visual
+Studio Code, which handles plain text files and does a whole lot more.
+You can <a class="reference external" href="https://code.visualstudio.com/download">download it for free at Microsoft’s
+site</a>.</p>
+<p>If I’m showing off on stream, you’ll probably see me using <a class="reference external" href="https://www.sublimetext.com/">Sublime
+Text</a>, which is the same kind of app as
+Visual Studio Code (and is also free to download, at least for trial
+purposes)</p>
+</div>
+</div>
+<span id="document-content/030-common-options"></span><div class="section" id="common-youtube-dl-options">
+<h2>Common youtube-dl options<a class="headerlink" href="#common-youtube-dl-options" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#starting-out" id="id1">Starting out</a></p>
+<ul>
+<li><p><a class="reference internal" href="#see-what-version-you-have-with-version" id="id2">See what version you have with <code class="docutils literal notranslate"><span class="pre">--version</span></code></a></p></li>
+<li><p><a class="reference internal" href="#list-all-the-options-and-what-they-do-with-help" id="id3">List all the options and what they do with <code class="docutils literal notranslate"><span class="pre">--help</span></code></a></p></li>
+<li><p><a class="reference internal" href="#reduce-the-output-to-screen-with-quiet" id="id4">Reduce the output to screen with <code class="docutils literal notranslate"><span class="pre">--quiet</span></code></a></p></li>
+<li><p><a class="reference internal" href="#do-nothing-with-skip-download" id="id5">Do “nothing” with <code class="docutils literal notranslate"><span class="pre">--skip-download</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#control-how-the-downloaded-video-is-named-and-saved" id="id6">Control how the downloaded video is named and saved</a></p>
+<ul>
+<li><p><a class="reference internal" href="#use-id-to-save-using-online-video-s-unique-id" id="id7">Use <code class="docutils literal notranslate"><span class="pre">-–id</span></code> to save using online video’s unique ID</a></p></li>
+<li><p><a class="reference internal" href="#simpler-filenames-with-restrict-filenames" id="id8">Simpler filenames with <code class="docutils literal notranslate"><span class="pre">--restrict-filenames</span></code></a></p></li>
+<li><p><a class="reference internal" href="#finer-grained-filename-control-with-o-and-templating" id="id9">Finer-grained filename control with <code class="docutils literal notranslate"><span class="pre">-o</span></code> and templating</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#batch-download-a-list-of-urls-from-file" id="id10">Batch download a list of URLs from file</a></p></li>
+<li><p><a class="reference internal" href="#miscellaneous-flags" id="id11">Miscellaneous flags</a></p>
+<ul>
+<li><p><a class="reference internal" href="#use-no-mtime-to-update-the-last-modified-attribute-of-downloaded-videos" id="id12">Use <code class="docutils literal notranslate"><span class="pre">--no-mtime</span></code> to update the last-modified attribute of downloaded videos</a></p></li>
+<li><p><a class="reference internal" href="#listing-and-specifying-formats" id="id13">Listing and specifying formats</a></p></li>
+<li><p><a class="reference internal" href="#download-the-associated-metadata" id="id14">Download the associated metadata</a></p></li>
+<li><p><a class="reference internal" href="#download-subtitles" id="id15">Download subtitles</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>See a list of options here:</p>
+<p><a class="reference external" href="https://github.com/ytdl-org/youtube-dl#options">https://github.com/ytdl-org/youtube-dl#options</a></p>
+<div class="section" id="starting-out">
+<h3><a class="toc-backref" href="#id1">Starting out</a><a class="headerlink" href="#starting-out" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="see-what-version-you-have-with-version">
+<h4><a class="toc-backref" href="#id2">See what version you have with <code class="docutils literal notranslate"><span class="pre">--version</span></code></a><a class="headerlink" href="#see-what-version-you-have-with-version" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">version</span>                        <span class="n">Print</span> <span class="n">program</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-all-the-options-and-what-they-do-with-help">
+<h4><a class="toc-backref" href="#id3">List all the options and what they do with <code class="docutils literal notranslate"><span class="pre">--help</span></code></a><a class="headerlink" href="#list-all-the-options-and-what-they-do-with-help" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>                       <span class="n">Print</span> <span class="n">this</span> <span class="n">help</span> <span class="n">text</span> <span class="ow">and</span> <span class="n">exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reduce-the-output-to-screen-with-quiet">
+<h4><a class="toc-backref" href="#id4">Reduce the output to screen with <code class="docutils literal notranslate"><span class="pre">--quiet</span></code></a><a class="headerlink" href="#reduce-the-output-to-screen-with-quiet" title="Permalink to this headline">¶</a></h4>
+<p>If you’re doing a lot of work with youtube-dl, especially with archiving
+content that you might already have or are just backing up or whatever,
+you might get tired of seeing all the info youtube-dl barfs to screen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="o">--</span><span class="n">quiet</span>                      <span class="n">Activate</span> <span class="n">quiet</span> <span class="n">mode</span>
+</pre></div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">-q</span></code> reduces the output info to basically nothing…which is why
+“quiet” mode can be unoptimal for command-line novices, as youtube-dl
+basically gives you no feedback about what happened, or what got
+downloaded (you should still get an error, if you tried doing something
+really wrong, like passing in a non-valid URL)</p>
+</div>
+<div class="section" id="do-nothing-with-skip-download">
+<h4><a class="toc-backref" href="#id5">Do “nothing” with <code class="docutils literal notranslate"><span class="pre">--skip-download</span></code></a><a class="headerlink" href="#do-nothing-with-skip-download" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">download</span>                  <span class="n">Do</span> <span class="ow">not</span> <span class="n">download</span> <span class="n">the</span> <span class="n">video</span>
+</pre></div>
+</div>
+<p>youtube-dl’s list of options <em>should</em> vast and intimidating; I
+personally haven’t used more than 1-5% of them (nevermind memorized
+them). It’s hard to explain why there are so many options without
+talking about the myriad of usecases and situations that people use
+youtube-dl for.</p>
+<p>But some options seem downright useless, like <code class="docutils literal notranslate"><span class="pre">--skip-download</span></code></p>
+</div>
+</div>
+<div class="section" id="control-how-the-downloaded-video-is-named-and-saved">
+<h3><a class="toc-backref" href="#id6">Control how the downloaded video is named and saved</a><a class="headerlink" href="#control-how-the-downloaded-video-is-named-and-saved" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="use-id-to-save-using-online-video-s-unique-id">
+<h4><a class="toc-backref" href="#id7">Use <code class="docutils literal notranslate"><span class="pre">-–id</span></code> to save using online video’s unique ID</a><a class="headerlink" href="#use-id-to-save-using-online-video-s-unique-id" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nb">id</span>                             <span class="n">Use</span> <span class="n">only</span> <span class="n">video</span> <span class="n">ID</span> <span class="ow">in</span> <span class="n">file</span> <span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="simpler-filenames-with-restrict-filenames">
+<h4><a class="toc-backref" href="#id8">Simpler filenames with <code class="docutils literal notranslate"><span class="pre">--restrict-filenames</span></code></a><a class="headerlink" href="#simpler-filenames-with-restrict-filenames" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">restrict</span><span class="o">-</span><span class="n">filenames</span>             <span class="n">Restrict</span> <span class="n">filenames</span> <span class="n">to</span> <span class="n">only</span> <span class="n">ASCII</span>
+                                 <span class="n">characters</span><span class="p">,</span> <span class="ow">and</span> <span class="n">avoid</span> <span class="s2">&quot;&amp;&quot;</span> <span class="ow">and</span> <span class="n">spaces</span> <span class="ow">in</span>
+                                 <span class="n">filenames</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="finer-grained-filename-control-with-o-and-templating">
+<h4><a class="toc-backref" href="#id9">Finer-grained filename control with <code class="docutils literal notranslate"><span class="pre">-o</span></code> and templating</a><a class="headerlink" href="#finer-grained-filename-control-with-o-and-templating" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">o</span><span class="p">,</span> <span class="o">--</span><span class="n">output</span> <span class="n">TEMPLATE</span>            <span class="n">Output</span> <span class="n">filename</span> <span class="n">template</span><span class="p">,</span> <span class="n">see</span> <span class="n">the</span> <span class="s2">&quot;OUTPUT</span>
+                                 <span class="n">TEMPLATE</span><span class="s2">&quot; for all the info</span>
+</pre></div>
+</div>
+<p>A full list of template options can be <a class="reference external" href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#output-template">found
+here</a>.</p>
+<p>I think these are the most relevant and commonly-used template options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ext</span></code> (string): Video filename extension</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (string): Video identifier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string): Video title</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploader</span></code> (string): Full name of the video uploader</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upload_date</span></code> (string): Video upload date (YYYYMMDD)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string): Video URL</p></li>
+</ul>
+<p>However, I often use <code class="docutils literal notranslate"><span class="pre">-o</span></code> without <em>any</em> options, when I want to keep
+things simple and already know what video format it comes in. For
+example, I believe all of Twitter video has a <code class="docutils literal notranslate"><span class="pre">.mp4</span></code> extension, so I
+can just do:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ youtube-dl -o <span class="s2">&quot;testvid.mp4&quot;</span> https://twitter.com/US_FDA/status/1288806553177321473
+</pre></div>
+</div>
+<p>Here’s how to download a video from Reddit, using the unique ID in the
+URL and whatever format Reddit delivers video in:</p>
+<p>With Reddit, I don’t know for sure what video formats it might put out.
+Here’s how I’d set the file name but leave the extension for youtube-dl
+to fill out:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -o <span class="s1">&#39;mytest.%(ext)s&#39;</span> https://www.reddit.com/r/test/comments/i0eyye/test_bash_cow_say_video_has_audio/
+</pre></div>
+</div>
+<p>Or, if I’m too lazy to come up with a name for the video, I can have a
+template that includes the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the video – in the case of
+Twitter/Reddit, the unique ID that’s in the URL:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -o <span class="s1">&#39;%(id)s.%(ext)s&#39;</span> https://twitter.com/US_FDA/status/1288806553177321473
+</pre></div>
+</div>
+<p>Note that doing <code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">'%(id)s.%(ext)s'</span></code> is essentially the same as using
+the simple <code class="docutils literal notranslate"><span class="pre">--id</span></code> option. But a common and good reason for using
+<code class="docutils literal notranslate"><span class="pre">-o</span></code> might be wanting to save a file to a different directory than
+your current working directory:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir -p tweeted
+
+youtube-dl -o <span class="s1">&#39;tweeted/%(id)s.%(ext)s&#39;</span> https://twitter.com/US_FDA/status/1288806553177321473
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="batch-download-a-list-of-urls-from-file">
+<h3><a class="toc-backref" href="#id10">Batch download a list of URLs from file</a><a class="headerlink" href="#batch-download-a-list-of-urls-from-file" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">batch</span><span class="o">-</span><span class="n">file</span> <span class="n">FILE</span>            <span class="n">File</span> <span class="n">containing</span> <span class="n">URLs</span> <span class="n">to</span> <span class="n">download</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="k">for</span>
+                                 <span class="n">stdin</span><span class="p">),</span> <span class="n">one</span> <span class="n">URL</span> <span class="n">per</span> <span class="n">line</span><span class="o">.</span> <span class="n">Lines</span> <span class="n">starting</span>
+                                 <span class="k">with</span> <span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span> <span class="ow">or</span> <span class="s1">&#39;]&#39;</span> <span class="n">are</span> <span class="n">considered</span> <span class="k">as</span>
+                                 <span class="n">comments</span> <span class="ow">and</span> <span class="n">ignored</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>For most people, being able to download videos one URL at a time is
+probably good enough. In fact, I’ve never had a need to do a batch
+download until writing this tutorial.</p>
+<p>But there may be a day when a lot of stuff is happening, enough that
+you’re using a spreadsheet to track URLs. And now you want a slightly
+more convenient way to get everything than to run every command
+manually.</p>
+<p>That’s a usecase for the <code class="docutils literal notranslate"><span class="pre">--batch-file</span></code> option, or <code class="docutils literal notranslate"><span class="pre">-a</span></code> for short.</p>
+<p>Let’s say I have a list of URLs like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">dancow</span><span class="o">/</span><span class="n">status</span><span class="o">/</span><span class="mi">1288678874084265985</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">US_FDA</span><span class="o">/</span><span class="n">status</span><span class="o">/</span><span class="mi">1288806553177321473</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">WhiteHouse</span><span class="o">/</span><span class="n">status</span><span class="o">/</span><span class="mi">1286065522220716032</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">reddit</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">r</span><span class="o">/</span><span class="n">newsbloopers</span><span class="o">/</span><span class="n">comments</span><span class="o">/</span><span class="n">hp9xff</span><span class="o">/</span><span class="n">serious_interview_turns_to_giggles_thanks_to_a</span><span class="o">/</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">imdb</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">video</span><span class="o">/</span><span class="n">vi2287451929</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">facebook</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">63811549237</span><span class="o">/</span><span class="n">videos</span><span class="o">/</span><span class="mi">10155075989594238</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">reddit</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">r</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">comments</span><span class="o">/</span><span class="n">i0eyye</span><span class="o">/</span><span class="n">test_bash_cow_say_video_has_audio</span><span class="o">/</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Twitter</span><span class="o">/</span><span class="n">status</span><span class="o">/</span><span class="mi">560070183650213889</span>
+</pre></div>
+</div>
+<p>And I’ve saved that list to a plain text file (<a class="reference external" href="#marker-plain-text-how">read this prior section
+if you don’t have a text editor yet</a>) in my
+current working directory as <code class="docutils literal notranslate"><span class="pre">vidlist.txt</span></code></p>
+<p>I should be able to download all of those URLs with a single command:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -a vidlist.txt
+</pre></div>
+</div>
+<p>Or, if I want them downloaded in a more orderly fashion, I can add the
+<code class="docutils literal notranslate"><span class="pre">-o</span></code> for a filename template, e.g. video id and upload date:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -a vidlist.txt  -o <span class="s2">&quot;%(upload_date)s-%(id)s.%(ext)s&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="miscellaneous-flags">
+<h3><a class="toc-backref" href="#id11">Miscellaneous flags</a><a class="headerlink" href="#miscellaneous-flags" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="use-no-mtime-to-update-the-last-modified-attribute-of-downloaded-videos">
+<h4><a class="toc-backref" href="#id12">Use <code class="docutils literal notranslate"><span class="pre">--no-mtime</span></code> to update the last-modified attribute of downloaded videos</a><a class="headerlink" href="#use-no-mtime-to-update-the-last-modified-attribute-of-downloaded-videos" title="Permalink to this headline">¶</a></h4>
+<p>If you use youtube-dl to download a really old video, by default,
+youtube-dl will give it a “Last modified date” equal to when the video
+was uplaoded.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">mtime</span>                       <span class="n">Do</span> <span class="ow">not</span> <span class="n">use</span> <span class="n">the</span> <span class="n">Last</span><span class="o">-</span><span class="n">modified</span> <span class="n">header</span> <span class="n">to</span> <span class="nb">set</span>
+                                 <span class="n">the</span> <span class="n">file</span> <span class="n">modification</span> <span class="n">time</span>
+</pre></div>
+</div>
+<p>If you’re like me, in which you have your files sorted by
+last-modified-most-recent, and you’re downloading files into a folder
+with a ton of other files, e.g. <code class="docutils literal notranslate"><span class="pre">~/Downloads</span></code> – then it’s kind of
+annoying to look for a video you <em>just</em> downloaded, expecting it to be
+at the top by “most recent” but finding it in the middle because the
+video was produced years ago.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">--no-mtime</span></code> flag will set the file’s last-modified time to
+when you downloaded it.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl --no-mtime https://twitter.com/Twitter/status/560070183650213889
+</pre></div>
+</div>
+</div>
+<div class="section" id="listing-and-specifying-formats">
+<h4><a class="toc-backref" href="#id13">Listing and specifying formats</a><a class="headerlink" href="#listing-and-specifying-formats" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="nb">format</span> <span class="n">FORMAT</span>              <span class="n">Video</span> <span class="nb">format</span> <span class="n">code</span><span class="p">,</span> <span class="n">see</span> <span class="n">the</span> <span class="s2">&quot;FORMAT</span>
+                                 <span class="n">SELECTION</span><span class="s2">&quot; for all the info</span>
+<span class="o">-</span><span class="n">F</span><span class="p">,</span> <span class="o">--</span><span class="nb">list</span><span class="o">-</span><span class="n">formats</span>               <span class="n">List</span> <span class="nb">all</span> <span class="n">available</span> <span class="n">formats</span> <span class="n">of</span> <span class="n">requested</span>
+                                 <span class="n">videos</span>
+</pre></div>
+</div>
+<p>Various sites use different media formats, and some of these sites use
+more than one format for whatever reason. Speaking for myself, I’m
+usually fine with whatever youtube-dl picks for me. But just in case
+you’re curious what’s available for a given URL.</p>
+<p>For example, for this reddit URL:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -F <span class="s1">&#39;https://www.reddit.com/r/test/comments/i0eyye/&#39;</span>
+</pre></div>
+</div>
+<p>(Note that <code class="docutils literal notranslate"><span class="pre">-F</span></code> only outputs the list of media formats; it does <em>not</em>
+attempt to download any video or other files)</p>
+<p>From the output, we see that reddit provides a variety of video
+formats/sizes, and in fact, also serves audio and video separately:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">RedditR</span><span class="p">]</span> <span class="n">i0eyye</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">JSON</span> <span class="n">metadata</span>
+<span class="p">[</span><span class="n">Reddit</span><span class="p">]</span> <span class="mi">8</span><span class="n">v1ezoig0xd51</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">m3u8</span> <span class="n">information</span>
+<span class="p">[</span><span class="n">Reddit</span><span class="p">]</span> <span class="mi">8</span><span class="n">v1ezoig0xd51</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">MPD</span> <span class="n">manifest</span>
+<span class="p">[</span><span class="n">info</span><span class="p">]</span> <span class="n">Available</span> <span class="n">formats</span> <span class="k">for</span> <span class="mi">8</span><span class="n">v1ezoig0xd51</span><span class="p">:</span>
+<span class="nb">format</span> <span class="n">code</span>         <span class="n">extension</span>  <span class="n">resolution</span> <span class="n">note</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">0</span><span class="o">-</span><span class="n">audio_0</span>       <span class="n">mp4</span>        <span class="n">audio</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">audio_1</span>       <span class="n">mp4</span>        <span class="n">audio</span> <span class="n">only</span>
+<span class="n">dash</span><span class="o">-</span><span class="n">audio_0_28017</span>  <span class="n">m4a</span>        <span class="n">audio</span> <span class="n">only</span> <span class="n">DASH</span> <span class="n">audio</span>   <span class="mi">28</span><span class="n">k</span> <span class="p">,</span> <span class="n">m4a_dash</span> <span class="n">container</span><span class="p">,</span> <span class="n">mp4a</span><span class="o">.</span><span class="mf">40.2</span> <span class="p">(</span><span class="mi">48000</span><span class="n">Hz</span><span class="p">)</span>
+<span class="n">dash</span><span class="o">-</span><span class="n">video_26790</span>    <span class="n">mp4</span>        <span class="mi">172</span><span class="n">x76</span>     <span class="n">DASH</span> <span class="n">video</span>   <span class="mi">26</span><span class="n">k</span> <span class="p">,</span> <span class="n">mp4_dash</span> <span class="n">container</span><span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">4</span><span class="n">D400D</span><span class="p">,</span> <span class="mi">30</span><span class="n">fps</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">dash</span><span class="o">-</span><span class="n">video_68389</span>    <span class="n">mp4</span>        <span class="mi">426</span><span class="n">x190</span>    <span class="n">DASH</span> <span class="n">video</span>   <span class="mi">68</span><span class="n">k</span> <span class="p">,</span> <span class="n">mp4_dash</span> <span class="n">container</span><span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">4</span><span class="n">D401E</span><span class="p">,</span> <span class="mi">30</span><span class="n">fps</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">97</span>              <span class="n">mp4</span>        <span class="mi">480</span><span class="n">x214</span>      <span class="mi">97</span><span class="n">k</span> <span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">42001</span><span class="n">e</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">103</span>             <span class="n">mp4</span>        <span class="mi">400</span><span class="n">x178</span>     <span class="mi">103</span><span class="n">k</span> <span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">42001</span><span class="n">e</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">dash</span><span class="o">-</span><span class="n">video_104434</span>   <span class="n">mp4</span>        <span class="mi">640</span><span class="n">x286</span>    <span class="n">DASH</span> <span class="n">video</span>  <span class="mi">104</span><span class="n">k</span> <span class="p">,</span> <span class="n">mp4_dash</span> <span class="n">container</span><span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">4</span><span class="n">D401E</span><span class="p">,</span> <span class="mi">30</span><span class="n">fps</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">111</span>             <span class="n">mp4</span>        <span class="mi">480</span><span class="n">x214</span>     <span class="mi">111</span><span class="n">k</span> <span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">42001</span><span class="n">e</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span>
+<span class="n">hls</span><span class="o">-</span><span class="mi">117</span>             <span class="n">mp4</span>        <span class="mi">400</span><span class="n">x178</span>     <span class="mi">117</span><span class="n">k</span> <span class="p">,</span> <span class="n">avc1</span><span class="o">.</span><span class="mi">42001</span><span class="n">e</span><span class="p">,</span> <span class="n">video</span> <span class="n">only</span> <span class="p">(</span><span class="n">best</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If for some reason we wanted the lowest quality video – a 172x76
+resolution mp4 video – we use the <code class="docutils literal notranslate"><span class="pre">-f</span></code> flag and refer to the
+corresponding format code, e.g. <code class="docutils literal notranslate"><span class="pre">dash-video_26790</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">youtube</span><span class="o">-</span><span class="n">dl</span> <span class="o">-</span><span class="n">f</span> <span class="s1">&#39;dash-video_26790&#39;</span> <span class="o">-</span><span class="n">o</span> <span class="n">yuck</span><span class="o">.</span><span class="n">mp4</span>  <span class="s1">&#39;https://www.reddit.com/r/test/comments/i0eyye/&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-the-associated-metadata">
+<h4><a class="toc-backref" href="#id14">Download the associated metadata</a><a class="headerlink" href="#download-the-associated-metadata" title="Permalink to this headline">¶</a></h4>
+<p>If you’re archiving online video, you might find it useful to also keep
+download associated assets and metadata. youtube-dl has some options for
+that:</p>
+<p>To save a copy of a video thumbnail, often the URL’s preview image:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">thumbnail</span>                <span class="n">Write</span> <span class="n">thumbnail</span> <span class="n">image</span> <span class="n">to</span> <span class="n">disk</span>
+</pre></div>
+</div>
+<p>To write a whole bunch of metadata in JSON format to a JSON text file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">info</span><span class="o">-</span><span class="n">json</span>                <span class="n">Write</span> <span class="n">video</span> <span class="n">metadata</span> <span class="n">to</span> <span class="n">a</span> <span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">json</span> <span class="n">file</span>
+</pre></div>
+</div>
+<p>For sites that have “description” fields, this saves it to a text file
+with a <code class="docutils literal notranslate"><span class="pre">.description</span></code> extension</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">description</span>              <span class="n">Write</span> <span class="n">video</span> <span class="n">description</span> <span class="n">to</span> <span class="n">a</span> <span class="o">.</span><span class="n">description</span>
+                                 <span class="n">file</span>
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir -p twitfoo
+
+youtube-dl -o twitfoo/test.mp4 --write-thumbnail --write-info-json --write-description <span class="s1">&#39;https://twitter.com/Twitter/status/560070183650213889&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-subtitles">
+<h4><a class="toc-backref" href="#id15">Download subtitles</a><a class="headerlink" href="#download-subtitles" title="Permalink to this headline">¶</a></h4>
+<p>A few sites supported by youtube-dl have subtitles. YouTube is an
+obvious example. Various news sites do too.</p>
+<p>To download a URL’s video and any and all of its subtitles files:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl -o abcnews.mp4 --all-subs https://abcnews.go.com/Health/video/trump-encourages-americans-donate-plasma-72086787
+</pre></div>
+</div>
+<p>Alternatively, you also have the option to download just the subtitle
+files, and no video/media, by using the <code class="docutils literal notranslate"><span class="pre">--skip-download</span></code> option:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl --skip-download --all-subs https://abcnews.go.com/Health/video/trump-encourages-americans-donate-plasma-72086787
+</pre></div>
+</div>
+<p>In the output, we can see that no video file has been saved, just a
+<code class="docutils literal notranslate"><span class="pre">.ttml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">abcnews</span><span class="p">:</span><span class="n">video</span><span class="p">]</span> <span class="n">Downloading</span> <span class="n">Akamai</span> <span class="n">AMP</span> <span class="n">feed</span>
+<span class="p">[</span><span class="n">abcnews</span><span class="p">:</span><span class="n">video</span><span class="p">]</span> <span class="mi">72086787</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">f4m</span> <span class="n">manifest</span>
+<span class="p">[</span><span class="n">abcnews</span><span class="p">:</span><span class="n">video</span><span class="p">]</span> <span class="mi">72086787</span><span class="p">:</span> <span class="n">Downloading</span> <span class="n">m3u8</span> <span class="n">information</span>
+<span class="p">[</span><span class="n">info</span><span class="p">]</span> <span class="n">Writing</span> <span class="n">video</span> <span class="n">subtitles</span> <span class="n">to</span><span class="p">:</span> <span class="n">Trump</span> <span class="n">encourages</span> <span class="n">Americans</span> <span class="n">to</span> <span class="n">donate</span> <span class="n">plasma</span><span class="o">-</span><span class="mf">72086787.</span><span class="n">en</span><span class="o">.</span><span class="n">ttml</span>
+</pre></div>
+</div>
+<p>If you open that <code class="docutils literal notranslate"><span class="pre">ttml</span></code> file in a text editor, you can see that it’s
+some kind of timestamped transcript format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">caption</span><span class="o">&gt;&lt;</span><span class="n">tt</span><span class="o">&gt;&lt;</span><span class="n">body</span><span class="o">&gt;&lt;</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:00.009&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:03.064&quot;</span> <span class="o">&gt;</span>
+<span class="n">They</span><span class="s1">&#39;re doing magnificent job at the recruit some delighted to &lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:03.073&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:04.349&quot;</span> <span class="o">&gt;</span>
+<span class="n">be</span> <span class="n">here</span><span class="o">.</span> <span class="n">To</span> <span class="n">discuss</span> <span class="n">the</span> <span class="n">remarkable</span> <span class="n">progress</span> <span class="n">being</span> <span class="n">made</span> <span class="ow">in</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:08.079&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:06.999&quot;</span> <span class="o">&gt;</span>
+<span class="n">the</span> <span class="n">development</span> <span class="n">of</span> <span class="n">close</span> <span class="n">plaza</span> <span class="n">so</span> <span class="n">important</span> <span class="n">therapies</span><span class="o">.</span> <span class="n">These</span> <span class="n">therapies</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:14.139&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:05.001&quot;</span> <span class="o">&gt;</span>
+<span class="n">tranche</span> <span class="ow">is</span> <span class="n">powerful</span> <span class="n">antibodies</span><span class="o">.</span> <span class="n">From</span> <span class="n">the</span> <span class="n">blood</span> <span class="n">of</span> <span class="n">recovered</span> <span class="n">patients</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">begin</span><span class="o">=</span><span class="s2">&quot;00:00:19.239&quot;</span> <span class="n">dur</span><span class="o">=</span><span class="s2">&quot;00:00:05.009&quot;</span> <span class="o">&gt;</span>
+<span class="n">to</span> <span class="n">help</span> <span class="n">treat</span> <span class="n">those</span> <span class="n">battling</span> <span class="n">the</span> <span class="n">current</span> <span class="n">infection</span><span class="o">.</span> <span class="n">That</span> <span class="n">we</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<span id="document-content/999-misc"></span><div class="section" id="more-fun-with-more-tools">
+<h2>More fun with more tools<a class="headerlink" href="#more-fun-with-more-tools" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#making-gifs-from-video-with-ffmpeg" id="id1">Making gifs from video with ffmpeg</a></p></li>
+<li><p><a class="reference internal" href="#turning-video-into-gifs-with-gifsicle" id="id2">Turning video into gifs with <code class="docutils literal notranslate"><span class="pre">gifsicle</span></code></a></p></li>
+<li><p><a class="reference internal" href="#resources" id="id3">Resources</a></p>
+<ul>
+<li><p><a class="reference internal" href="#other-links" id="id4">Other links</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="making-gifs-from-video-with-ffmpeg">
+<h3><a class="toc-backref" href="#id1">Making gifs from video with ffmpeg</a><a class="headerlink" href="#making-gifs-from-video-with-ffmpeg" title="Permalink to this headline">¶</a></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="section" id="turning-video-into-gifs-with-gifsicle">
+<h3><a class="toc-backref" href="#id2">Turning video into gifs with <code class="docutils literal notranslate"><span class="pre">gifsicle</span></code></a><a class="headerlink" href="#turning-video-into-gifs-with-gifsicle" title="Permalink to this headline">¶</a></h3>
+<p>Easiest way to install is via homebrew:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew install gifsicle
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/kohler/gifsicle">https://github.com/kohler/gifsicle</a></p>
+</div>
+<div class="section" id="resources">
+<h3><a class="toc-backref" href="#id3">Resources</a><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="other-links">
+<h4><a class="toc-backref" href="#id4">Other links</a><a class="headerlink" href="#other-links" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.pbs.org/show/copyright-educators/">https://www.pbs.org/show/copyright-educators/</a>
+<a class="reference external" href="https://www.pbs.org/video/pbs-socal-education-copyright-for-educators-fair-use/">https://www.pbs.org/video/pbs-socal-education-copyright-for-educators-fair-use/</a></p>
+<p><a class="reference external" href="https://www.reddit.com/r/youtubedl/">https://www.reddit.com/r/youtubedl/</a></p>
+<p><a class="reference external" href="https://www.linuxjournal.com/content/working-youtube-and-extracting-audio">Working with YouTube and Extracting
+Audio</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Dan Nguyen
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

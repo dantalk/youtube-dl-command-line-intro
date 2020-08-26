@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting installed and ready &mdash; Intro to using the command-line and youtube-dl Notes 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://dantalk.github.io/youtube-dl-command-line-introcontent/010-setup.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="youtube-dl and command-line basics" href="020-basics.html" />
+    <link rel="prev" title="Introduction" href="000-intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Intro to using the command-line and youtube-dl Notes
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="000-intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting installed and ready</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-open-your-operating-systems-shell-terminal">How to open your operating system’s shell/Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-youtube-dl">Installing youtube-dl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-if-youtube-dl-is-installed-and-working">Testing if youtube-dl is installed and working</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="020-basics.html">youtube-dl and command-line basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="030-common-options.html">Common youtube-dl options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="999-misc.html">More fun with more tools</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Intro to using the command-line and youtube-dl Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Getting installed and ready</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/content/010-setup.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-installed-and-ready">
+<h1>Getting installed and ready<a class="headerlink" href="#getting-installed-and-ready" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#how-to-open-your-operating-systems-shell-terminal" id="id1">How to open your operating system’s shell/Terminal</a></p>
+<ul>
+<li><p><a class="reference internal" href="#macos-terminal" id="id2">macOS Terminal</a></p></li>
+<li><p><a class="reference internal" href="#windows-powershell" id="id3">Windows PowerShell</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#installing-youtube-dl" id="id4">Installing youtube-dl</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installing-youtube-dl-if-you-have-python-installed" id="id5">Installing youtube-dl if you have Python installed</a></p>
+<ul>
+<li><p><a class="reference internal" href="#how-to-install-python-on-your-system-if-you-dont-already-have-it" id="id6">How to install Python on your system if you don’t already have it</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#installing-youtube-dl-on-macos-linux-using-homebrew" id="id7">Installing youtube-dl on macOS/Linux using homebrew</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#testing-if-youtube-dl-is-installed-and-working" id="id8">Testing if youtube-dl is installed and working</a></p></li>
+</ul>
+</div>
+<div class="section" id="how-to-open-your-operating-systems-shell-terminal">
+<h2><a class="toc-backref" href="#id1">How to open your operating system’s shell/Terminal</a><a class="headerlink" href="#how-to-open-your-operating-systems-shell-terminal" title="Permalink to this headline">¶</a></h2>
+<p>This section covers just how to find and open your operating system’s
+command-line interface, also referred to as Terminal on macOS, or
+PowerShell/cmd.exe for Windows; or, more generally: the <strong>shell</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Note:</strong> In subsequent sections, I’ll just use “shell” to refer to
+your system’s command-line interface, whether you’re using, whether
+it’s Windows Powershell or macOS Terminal. Technically “shell” is not
+the exact nomenclature either (you might hear others talk about
+“bash” or “zsh”) but it’s good enough for now.</p>
+</div>
+<div class="section" id="macos-terminal">
+<h3><a class="toc-backref" href="#id2">macOS Terminal</a><a class="headerlink" href="#macos-terminal" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Note:</strong> Unfortunately, as a macOS user, you will need to use
+Terminal in order to install youtube-dl on macOS, which is why this
+section is <em>before</em> the how-to-install-youtube-dl…</p>
+</div>
+<p>If you know no other way to operate your computer other than how to
+point-and-click (which is <strong>a lot</strong>, mind you), the simplest way to find
+and open <strong>Terminal</strong> is to go into <strong>Spotlight</strong> (the system search
+bar) and type <code class="docutils literal notranslate"><span class="pre">Terminal.app</span></code>:</p>
+<img alt="../_images/spotlight-terminal-app.png" src="../_images/spotlight-terminal-app.png" />
+<p>Alternatively, open up <strong>Finder</strong> and click-navigate to your
+<strong>Applications</strong> folder, then to its subfolder, <strong>Utilities</strong>:</p>
+<img alt="../_images/finder-terminal.png" src="../_images/finder-terminal.png" />
+<p>Clicking on <strong>Terminal.app</strong> should pop open an application window that
+looks similar to what I have (but not exactly, since I’ve customized how
+Terminal looks, including the emoji in my prompt):</p>
+<img alt="../_images/open-terminal.png" src="../_images/open-terminal.png" />
+<p>If you’ve never run a Terminal command before, now’s your chance: type
+<code class="docutils literal notranslate"><span class="pre">pwd</span></code> and hit <strong>Enter</strong>:</p>
+<img alt="../_images/open-terminal-pwd.png" src="../_images/open-terminal-pwd.png" />
+<p><a class="reference external" href="https://www.tecmint.com/pwd-command-examples/">pwd</a> – short for
+‘print working directory’, is a command that simply prints to screen the
+name of “where you are” in your filesystem. By default, you should be at
+what’s called your <strong>home directory</strong>.</p>
+<p>What/where is “here”, or the “home directory” exactly? You can find out
+by executing a command named <code class="docutils literal notranslate"><span class="pre">open</span></code> followed by a whitespace
+(i.e. hitting Spacebar), and then an <strong>argument</strong> (“argument” is the
+word used to describe a value/thing you want the command to operate on).</p>
+<p>In this example, the argument is a single dot/period, which is shorthand
+for “<em>this directory</em>”</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>open .
+</pre></div>
+</div>
+<p>Typing the full name of your current working directory (i.e. what
+<code class="docutils literal notranslate"><span class="pre">pwd</span></code> produced, which was <code class="docutils literal notranslate"><span class="pre">/Users/dan</span></code> for me) would also work:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>open /Users/dan
+</pre></div>
+</div>
+<p>Either way, you should see a good ol <strong>Finder</strong> window pop open, showing
+you the list of files and folders in your home directory – you’re
+probably at least familiar with <code class="docutils literal notranslate"><span class="pre">Desktop</span></code>, <code class="docutils literal notranslate"><span class="pre">Downloads</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">Documents</span></code>:</p>
+<img alt="../_images/open-terminal-pwd.png" src="../_images/open-terminal-pwd.png" />
+<p>And that’s about all we need to know for now when it comes to using
+Terminal, i.e. your macOS <strong>shell</strong></p>
+</div>
+<div class="section" id="windows-powershell">
+<h3><a class="toc-backref" href="#id3">Windows PowerShell</a><a class="headerlink" href="#windows-powershell" title="Permalink to this headline">¶</a></h3>
+<p>I didn’t have the time to boot into Windows 10 and take screenshots. The
+best help I can give at this moment is: to open the PowerShell command
+line, go to the Windows Start Menu search bar and type <code class="docutils literal notranslate"><span class="pre">powershell</span></code></p>
+<p>Here’s a pretty good walkthrough (though it gets into technical terms a
+little too soon for my liking): <a class="reference external" href="https://www.guru99.com/powershell-tutorial.html">Guru99: Powershell Tutorial for
+Beginners: Learn in 1
+Day</a></p>
+<p>Here’s a <a class="reference external" href="https://youtu.be/IHrGresKu2w?t=172">popular YouTube tutorial by Shane
+Young</a></p>
+</div>
+</div>
+<div class="section" id="installing-youtube-dl">
+<h2><a class="toc-backref" href="#id4">Installing youtube-dl</a><a class="headerlink" href="#installing-youtube-dl" title="Permalink to this headline">¶</a></h2>
+<p>The official download and installation instructions can be <a class="reference external" href="https://ytdl-org.github.io/youtube-dl/download.html">found on the
+youtube-dl official
+site</a></p>
+<p>Unfortunately, the installation process for both Windows and macOS is
+not a simple click-and-install process, and may be downright confusing
+and intimidating if you’ve never used used the command-line. I apologize
+in advance if these brief instructions don’t get you anywhere; hopefully
+it’s some small comfort to know that the installation process is often
+the most difficult and confusing part of learning new tools</p>
+<div class="section" id="installing-youtube-dl-if-you-have-python-installed">
+<h3><a class="toc-backref" href="#id5">Installing youtube-dl if you have Python installed</a><a class="headerlink" href="#installing-youtube-dl-if-you-have-python-installed" title="Permalink to this headline">¶</a></h3>
+<p><strong>If you already have Python installed (macOS/Windows/Linux)</strong></p>
+<p>If you’ve been using <strong>macOS</strong> before 10.15 i.e. Catalina, your system
+<em>should</em> already have Python installed. Otherwise, you <em>might</em> have
+Python installed for some other reason, such as being a dependency for
+some other thing you’ve installed, or maybe you’ve tried learning to
+code.</p>
+<p>In any case, the easiest way to find out is to open your system shell
+and execute the command, <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>, which should print out
+something like <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">2.7.17</span></code>:</p>
+<p>If that’s the case, then installing youtube-dl should be as easy as
+running this command:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo pip install --upgrade youtube-dl
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note: The <code class="docutils literal notranslate"><span class="pre">sudo</span></code> command will probably prompt you for your password
+– this is the password you use to log into your computer</p>
+</div>
+<p>And if the <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> command works, you’ll get output that looks
+like this, likely with warnings that (hopefully) you can ignore:</p>
+<img alt="../_images/sudo-pip-install-youtubedl.png" src="../_images/sudo-pip-install-youtubedl.png" />
+<p>And if that seemed to work, skip ahead to the section titled, “Testing
+if youtube-dl is installed and working” TKref</p>
+<div class="section" id="how-to-install-python-on-your-system-if-you-dont-already-have-it">
+<h4><a class="toc-backref" href="#id6">How to install Python on your system if you don’t already have it</a><a class="headerlink" href="#how-to-install-python-on-your-system-if-you-dont-already-have-it" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note: obviously skip this section if you already have Python
+installed.</p>
+</div>
+</div>
+</div>
+<div class="section" id="installing-youtube-dl-on-macos-linux-using-homebrew">
+<h3><a class="toc-backref" href="#id7">Installing youtube-dl on macOS/Linux using homebrew</a><a class="headerlink" href="#installing-youtube-dl-on-macos-linux-using-homebrew" title="Permalink to this headline">¶</a></h3>
+<p>If the python i.e. <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> method didn’t work <strong>and you’re on
+macOS</strong> (or Linux apparently, I haven’t tried it out), then maybe the
+more reliable (and common) way to install youtube-dl is by installing
+another program called <strong>homebrew</strong>.</p>
+<p><strong>homebrew</strong> is a command-line package manager, i.e. a shell program
+that manages the installation of other programs, and you can find the
+installation on Homebrew’s homepage: <a class="reference external" href="https://brew.sh/">https://brew.sh/</a></p>
+<p>As of July 2020, the copy-paste one-liner to execute in your shell is:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note:</strong> normally, you should not be copy-pasting commands that you
+<em>totally</em> do not understand, like the one above. Please check the
+<a class="reference external" href="https://brew.sh/">Homebrew homepage</a> yourself to see what it says
+– the command may have changed since I posted it here; also, the
+homepage gives some description about what’s happening…</p>
+</div></blockquote>
+<p><strong>If</strong> that worked, then installing youtube-dl should be as easy as this
+command:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew install youtube-dl
+</pre></div>
+</div>
+<p>You’ll hopefully get output that looks like this:</p>
+<img alt="../_images/brew-install-youtubedl.png" src="../_images/brew-install-youtubedl.png" />
+<p>TKTKTK</p>
+</div>
+</div>
+<div class="section" id="testing-if-youtube-dl-is-installed-and-working">
+<h2><a class="toc-backref" href="#id8">Testing if youtube-dl is installed and working</a><a class="headerlink" href="#testing-if-youtube-dl-is-installed-and-working" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to tell if <code class="docutils literal notranslate"><span class="pre">youtube-dl</span></code> is installed and working is to
+run it with a version check, i.e.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>youtube-dl --version
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="020-basics.html" class="btn btn-neutral float-right" title="youtube-dl and command-line basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="000-intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Dan Nguyen
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
